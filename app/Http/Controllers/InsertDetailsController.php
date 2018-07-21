@@ -73,6 +73,8 @@ class InsertDetailsController extends Controller
 
       $student->save();
 
+      return view('studentstatus');
+
 }
 
 }

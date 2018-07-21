@@ -34,17 +34,16 @@ Route::get('/first_approval_details', function () {
     return view('first_approval_details');
 });
 
-<<<<<<< HEAD
 Route::get('/student_status', function () {
     return view('');
 });
 
+Route::get('/firstapprovals', 'PrimaryDetailsRetrievalController@showDetails');
+
 //Route::get('/first_approval_details', 'PrimaryDetailsController@enterPrimaryDetails');
-=======
 
 Route::get('/primary_details', 'PrimaryDetailsRetrievalController@showDetails');
 
->>>>>>> 84a1bef3f2cc0b5ddd5f41448f64537d90442790
 
 
 
