@@ -11,7 +11,7 @@
             <td>Last Name</td>
             <td>Email</td>
             </tr>
-            @foreach ($users as $user)
+            @foreach ($result as $result)
                 <tr>
                 <td>{{ $result->id }}</td>
                 <td>{{ $result->firstName }}</td>

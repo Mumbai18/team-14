@@ -77,4 +77,9 @@ class InsertDetailsController extends Controller
 
 }
 
+public function updateFirstStatus(Request $request){
+
+}
+
+
 }

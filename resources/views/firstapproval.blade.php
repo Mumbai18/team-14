@@ -10,7 +10,7 @@
             <div class="card">
                <div class="card-header" id="headingOne">
                   <h5 class="mb-0">
-                      <label><input type="checkbox" name="{{$sd->id}}"></label>&nbsp&nbsp
+                      <label><input type="checkbox" name="statuses[]" value="{{$sd->id}}"></label>
 
                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" onclick="collapse()">
 
