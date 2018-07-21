@@ -18,6 +18,7 @@ class CreateDocumentsTable extends Migration
             $table->timestamps();
             $table->foreign('userId')->references('id')->on('users')->onDelete('cascade');
             $table->string('path');
+            $table->string('name');
         });
     }
 
