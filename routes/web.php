@@ -23,3 +23,7 @@ Route::post('/insertStudent', [
     'as' => 'insert.Student',
     'uses' => 'InsertDetailsController@storeStudentDetails'
   ]);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
