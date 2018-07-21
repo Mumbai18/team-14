@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\User;
 use App\Student;
@@ -70,7 +70,7 @@ class InsertDetailsController extends Controller
       $student->totalFamilyIncome = $request->totalFamilyIncome;
       $student->totalBurden = $request->totalBurden;
       $student->totalNoOfMembers = $request->totalNoOfMembers;
-
+      $student->user_id = Auth::user()->id;
       $student->save();
 
       return view('studentstatus');
@@ -80,14 +80,35 @@ class InsertDetailsController extends Controller
 public function updateFirstStatus(Request $request){
       
       $status = $request->statuses;
-      $i=0;
       foreach($status as $s){
             $stud = Student::find($s);
             $stud->status = 1;
             $stud->save();
+            $vol = Volunteer::where('assignedTo','!=',null)->first();
+            if($vol != null)
+            {
+                  $volun = Volunteer::find($vol->id);
+                  $volun->assignedTo = $s;
+                  $volun->save();
+                  
+            }
       }
 
+      //call message and mail controller
+      
+
 }
+
+//doc verification done
+    public function scrutiny(Request $request){
+      $studid = $request->statuses;  
+      $stud = Student::find($studid);
+      $stud->status = 2;
+      $stud->save();
+    }
+}
+
+
 
 
 }

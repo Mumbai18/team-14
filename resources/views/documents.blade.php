@@ -120,6 +120,20 @@
             <hr>
      </div>
 
+     <div class="container" style="width:100%;">  
+        <h3>Fee Structure</h3>  
+        <br/>
+        <div class="col-md-12">  
+            <form method="post" action="" enctype="multipart/form-data">  
+                <input type="file" class="col-md-4" name="feeStructure" id="feeStructure" required/>
+                <div class="col-md-6">
+                   <hr> 
+                </div> 
+            </form>
+            <hr>
+     </div>
+     
+
      <h2>Upload Extra details</h2>
 
 	 <div class="container" style="width:100%;">  
