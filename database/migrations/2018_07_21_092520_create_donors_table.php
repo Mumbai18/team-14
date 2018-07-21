@@ -21,6 +21,7 @@ class CreateDonorsTable extends Migration
             $table->string('address');
             $table->string('pincode');
             $table->string('aadharNo');
+            $table->string('preference')->nullable();
             $table->string('city');
             $table->string('state');
             $table->string('country');
