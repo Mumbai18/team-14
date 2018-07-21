@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-use User;
-use Document;
+use App\User;
+use App\Document;
 use DB;
 use Twilio\Rest\Client;
 
