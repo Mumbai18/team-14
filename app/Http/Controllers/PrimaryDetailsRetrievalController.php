@@ -14,6 +14,6 @@ class PrimaryDetailsRetrievalController extends Controller
 	public function showDetails()
 	{
     	$result = DB::select('select * from students');
-		return view('first_approval_details',['result'=>$result]);
+		return view('primary_details',['result'=>$result]);
 	}    
 }
