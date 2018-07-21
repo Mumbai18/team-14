@@ -1,6 +1,6 @@
-<?php 
-	include(nav_side.blade.php);
- ?>
+@include(nav_side)
+
+@section
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,3 +54,4 @@
 
  </body>
 </html>
+@endsection

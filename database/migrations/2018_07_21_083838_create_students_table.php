@@ -45,6 +45,7 @@ class CreateStudentsTable extends Migration
              $table->string('totalNoOfMembers');
              $table->string('totalBurden');
              $table->string('educonID')->nullable();
+             $table->integer('status')->default('0');
             $table->timestamps();
         });
     }
