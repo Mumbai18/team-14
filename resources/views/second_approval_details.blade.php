@@ -243,7 +243,7 @@ function closeNav() {
             
         
         <div class="form-horizontal">
-            <label for="owner" class="col-lg-4 control-label">Accomadation on Own or Rented?</label>
+            <label for="owner" class="col-lg-4 control-label">Accomodation on Own or Rented?</label>
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
             <input type="text" class="form-control" id="Owner" name="owner" placeholder="" 
@@ -254,7 +254,7 @@ function closeNav() {
         
         
         <div class="form-horizontal">
-            <label for="type" class="col-lg-4 control-label">Type of Accomadation</label>
+            <label for="type" class="col-lg-4 control-label">Type of Accomodation</label>
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
             <input type="text" class="form-control" id="Type" name="type" placeholder=""

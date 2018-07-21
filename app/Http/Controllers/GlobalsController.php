@@ -48,6 +48,12 @@ class GlobalsController extends Controller
 
     public function sendMail($mailid='',$message="Hi from JPMC-CFG",$subject="Subject")
     {
+<<<<<<< HEAD
+      Mail::send('emails.welcome', ['key' => 'value'], function($message)
+      {
+          $message->to('mitvparekh9@yahoo.com', 'John Smith')->subject('Welcome!');
+      });
+=======
       $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
       try {
           //Server settings
@@ -76,6 +82,7 @@ class GlobalsController extends Controller
       } catch (Exception $e) {
           echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
       }
+>>>>>>> 173f73578f9b7fcf224cba5ab0d0e17a5413fe60
     }
 
 

@@ -41,6 +41,7 @@ class InsertDetailsController extends Controller
 
 
       $student = new Student;
+      $student->user_id = Auth::user()->id;
       $student->firstName = $request->firstName;
       $student->lastName = $request->lastName;
       $student->emailId = $request->emailId;
@@ -73,7 +74,7 @@ class InsertDetailsController extends Controller
       $student->user_id = Auth::user()->id;
       $student->save();
 
-      return view('studentstatus');
+      return view('index');
 
 }
 
@@ -100,11 +101,17 @@ public function updateFirstStatus(Request $request){
 }
 
 public function storeAfterVerification(Request $request){
-      $student = Auth::user();
+      $stu = Auth::user();
+      $id = $stu->id;
+      $student = Student::where('user_id','=',$id)->first();
       $student->period = $request->period;
       $student->amountRequired = $request->amountRequired;
       $student->score = ($student->totalFamilyIncome - $student->totalBurden)/$student->totalNoOfMembers;
       $student->save();
+
+      return view('profile');
+
+
 }
 
 //doc verification done
@@ -119,4 +126,4 @@ public function storeAfterVerification(Request $request){
 
 
 
-}
+

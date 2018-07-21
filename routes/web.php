@@ -34,6 +34,11 @@ Route::post('/updatePeriodAmt', [
     'uses' => 'InsertDetailsController@storeAfterVerification'
   ]);
 
+Route::post('/uploadDocuments', [
+    'as' => 'upload.documents',
+    'uses' => 'FileUploadController@uploadFile'
+  ]);
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -41,7 +46,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 //Route::get('/first_approval_details', 'InsertDetailsController@storeStudentDetails');
 
 Route::get('/first_approval_details', function () {
-    return view('first_approval_details');
+	$user = Auth::user();
+    return view('first_approval_details')->with('user',$user);
+});
+
+Route::get('/upload_documents', function () {
+    return view('documents');
 });
 
 Route::get('/afterVerify', function () {
