@@ -68,5 +68,10 @@ class InsertDetails extends Controller
       		$student->motherEmailId = $request->motherEmailId;
       		$student->motherQualification = $request->motherQualification;
       		$student->motherOfficeAddress = $request->motherOfficeAddress;
+            $student->totalFamilyIncome = $request->totalFamilyIncome;
+            $student->totalBurden = $request->totalBurden;
+            $student->totalFamilyMembers = $request->totalFamilyMembers;
+            
             $student->save();
+
 }

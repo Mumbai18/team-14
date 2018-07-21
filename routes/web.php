@@ -28,3 +28,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//Route::get('/first_approval_details', 'InsertDetailsController@storeStudentDetails');
+
+Route::get('/first_approval_details', function () {
+    return view('first_approval_details');
+});
+
+//Route::get('/first_approval_details', 'PrimaryDetailsController@enterPrimaryDetails');
+
+
+
