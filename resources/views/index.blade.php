@@ -52,7 +52,7 @@
       }; 
       date_input.datepicker(options); 
     }); 
-
+</script>
 
     <style> 
     .pb-modalreglog-container 
@@ -964,10 +964,20 @@
         </div> 
     </div> 
 </div> 
-
+<div style="float: left;">
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+ 
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</div>
 
   <div class="footer">
   </div>
+  
 
     </body>
 </html>
