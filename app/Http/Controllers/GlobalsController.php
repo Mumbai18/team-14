@@ -8,7 +8,7 @@ use App\Document;
 use DB;
 use Twilio\Rest\Client;
 
-class FileUpload extends Controller
+class GlobalsController extends Controller
 {
     public function makeRequest(Request $request)
     {
@@ -45,7 +45,10 @@ class FileUpload extends Controller
 
     public function sendMail($mailid='',$message="Hi from JPMC-CFG")
     {
-
+      Mail::send('emails.welcome', ['key' => 'value'], function($message)
+      {
+          $message->to('foo@example.com', 'John Smith')->subject('Welcome!');
+      });
     }
 
 
