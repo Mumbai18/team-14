@@ -66,3 +66,7 @@ Route::get('/makeRequest', 'GlobalsController@makeRequest');
 Route::get("/dummyMessage",'GlobalsController@sendSMS');
 
 Route::get("/dummyMail",'GlobalsController@sendMail');
+
+Route::get("/chatroom",'ChatController@chat');
+
+Route::get("/chatrooms",'ChatsController@chats');
