@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/profile', function () {
+    return view('profile');
+});
+
 Route::post('/insertStudent', [
     'as' => 'insert.Student',
     'uses' => 'InsertDetailsController@storeStudentDetails'
