@@ -14,7 +14,7 @@
         <br/>
         <div class="col-md-12">  
             <form method="post" action="" enctype="multipart/form-data">  
-                <input type="file" class="col-md-4" name="aadhar" id="aadhar"/>
+                <input type="file" class="col-md-4" name="aadhar" id="aadhar" required/>
                 <div class="col-md-6">
                    <hr> 
                 </div> 
@@ -27,7 +27,7 @@
         <br/>
         <div class="col-md-12">  
             <form method="post" action="" enctype="multipart/form-data">  
-                <input type="file" class="col-md-4" name="pancard" id="pancard"/>
+                <input type="file" class="col-md-4" name="pancard" id="pancard"  required/>
                 <div class="col-md-6">
                    <hr> 
                 </div> 
@@ -45,7 +45,7 @@
         <br/>
         <div class="col-md-12">  
             <form method="post" action="" enctype="multipart/form-data">  
-                <input type="file" class="col-md-4" name="bankStatement" id="bankStatement"/>
+                <input type="file" class="col-md-4" name="bankStatement" id="bankStatement" required/>
                 <div class="col-md-6">
                    <hr> 
                 </div> 
@@ -58,7 +58,7 @@
         <br/>
         <div class="col-md-12">  
             <form method="post" action="" enctype="multipart/form-data">  
-                <input type="file" class="col-md-4" name="incomeCertificate" id="incomeCertificate"/>
+                <input type="file" class="col-md-4" name="incomeCertificate" id="incomeCertificate"  required/>
                 <div class="col-md-6">
                    <hr> 
                 </div> 
@@ -71,7 +71,7 @@
         <br/>
         <div class="col-md-12">  
             <form method="post" action="" enctype="multipart/form-data">  
-                <input type="file" class="col-md-4" name="salarySlip" id="salarySlip"/>
+                <input type="file" class="col-md-4" name="salarySlip" id="salarySlip" required/>
                 <div class="col-md-6">
                    <hr> 
                 </div> 
@@ -86,7 +86,7 @@
         <br/>
         <div class="col-md-12">  
             <form method="post" action="" enctype="multipart/form-data">  
-                <input type="file" class="col-md-4" name="marksheet1" id="marksheet1"/>
+                <input type="file" class="col-md-4" name="marksheet1" id="marksheet1" required/>
                 <div class="col-md-6">
                    <hr> 
                 </div> 
@@ -99,7 +99,7 @@
         <br/>
         <div class="col-md-12">  
             <form method="post" action="Passport_Backend.php" enctype="multipart/form-data">  
-                <input type="file" class="col-md-4" name="marksheet2" id="marksheet2"/>
+                <input type="file" class="col-md-4" name="marksheet2" id="marksheet2" required/>
                 <div class="col-md-6">
                    <hr> 
                 </div> 
@@ -112,7 +112,7 @@
         <br/>
         <div class="col-md-12">  
             <form method="post" action="Passport_Backend.php" enctype="multipart/form-data">  
-                <input type="file" class="col-md-4" name="marksheet3" id="marksheet3"/>
+                <input type="file" class="col-md-4" name="marksheet3" id="marksheet3" required/>
                 <div class="col-md-6">
                    <hr> 
                 </div> 
@@ -127,7 +127,7 @@
         <br/>
         <div class="col-md-12">  
             <form method="post" action="Passport_Backend.php" enctype="multipart/form-data">  
-                <input type="file" class="col-md-4" name="extra1" id="extra1"/>
+                <input type="file" class="col-md-4" name="extra1" id="extra1" required/>
                 <div class="col-md-6">
                    <hr> 
                 </div> 
