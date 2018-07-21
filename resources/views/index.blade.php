@@ -179,13 +179,14 @@
           <div class="nav navbar-nav navbar"> 
        
           <!-- Side bar starts--> 
-        <!--   
+        
           <div id="mySidenav" class="sidenav" > 
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> 
         <a href="#">Upload Documents</a> 
-        <a href="#">Apply Now</a> 
+        <a href="#">Appply for Dontation</a> 
         <a href="#">Application Status</a> 
         <a href="#">Your Profile</a> 
+        <a href="#">Chat</a> 
       </div> 
        
        
@@ -199,7 +200,7 @@
       function closeNav() { 
           document.getElementById("mySidenav").style.width = "0"; 
       } 
-      </script>  -->
+      </script>  
        
       <!-- side bar ends--> 
       </div> 
