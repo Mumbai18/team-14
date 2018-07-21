@@ -70,7 +70,7 @@
                      </div>
                   </div>
                   <div class="form-group{{ $errors->has('role') ? ' has-error' : '' }}">
-                     <label for="password-confirm" class="col-md-4 control-label">Select Role</label>
+                     <label for="role" class="col-md-4 control-label">Select Role</label>
                      <div class="col-md-6">
                         <select class="form-control " id="role" name="role" value="{{ old('role') }}">
                            <option value="Student">Student</option>
@@ -84,9 +84,8 @@
             </div>
             <div class="form-group">
             <div class="col-md-6 col-md-offset-4">
-            <button type="submit" class="btn btn-primary">
-            Register
-            </button>
+            <input value="Register" type="submit" class="btn btn-primary">
+            
             </div>
             </div>
             </form>

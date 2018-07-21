@@ -52,7 +52,7 @@
       }; 
       date_input.datepicker(options); 
     }); 
-
+</script>
 
     <style> 
     .pb-modalreglog-container 

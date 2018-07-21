@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-use User;
-use Document;
+use App\User;
+use App\Document;
 use DB;
 
 class FileUploadController extends Controller
@@ -21,7 +21,7 @@ class FileUploadController extends Controller
         $document->path = $id.'.pdf';
         $document->save();
         $file = $request->file('aadhar');
-        $file->move('','aadhar'.$id.'.'.$file->getClientOriginalExtension());
+        $file->move('/storage/app','aadhar'.$id.'.'.$file->getClientOriginalExtension());
       }
       if($request->hasFile('pancard'))
       {
@@ -31,7 +31,7 @@ class FileUploadController extends Controller
         $document->path = $id.'.pdf';
         $document->save();
         $file = $request->file('pancard');
-        $file->move('','pancard'.$id.'.'.$file->getClientOriginalExtension());
+        $file->move('/storage/app','pancard'.$id.'.'.$file->getClientOriginalExtension());
 
       }
       if($request->hasFile('bankStatement'))
@@ -42,7 +42,7 @@ class FileUploadController extends Controller
         $document->path = $id.'.pdf';
         $document->save();
         $file = $request->file('bankStatement');
-        $file->move('','bankStatement'.$id.'.'.$file->getClientOriginalExtension());
+        $file->move('/storage/app','bankStatement'.$id.'.'.$file->getClientOriginalExtension());
       }
       if($request->hasFile('incomeCertificate'))
       {
@@ -52,7 +52,7 @@ class FileUploadController extends Controller
         $document->path = $id.'.pdf';
         $document->save();
         $file = $request->file('incomeCertificate');
-        $file->move('','incomeCertificate'.$id.'.'.$file->getClientOriginalExtension());
+        $file->move('/storage/app','incomeCertificate'.$id.'.'.$file->getClientOriginalExtension());
       }
       if($request->hasFile('salarySlip'))
       {
@@ -62,7 +62,7 @@ class FileUploadController extends Controller
         $document->path = $id.'.pdf';
         $document->save();
         $file = $request->file('salarySlip');
-        $file->move('','salarySlip'.$id.'.'.$file->getClientOriginalExtension());
+        $file->move('/storage/app','salarySlip'.$id.'.'.$file->getClientOriginalExtension());
       }
       if($request->hasFile('marksheet1'))
       {
@@ -71,8 +71,8 @@ class FileUploadController extends Controller
         $document->name = 'marksheet1';
         $document->path = $id.'.pdf';
         $document->save();
-        $file = $request->file('marksheet1_');
-        $file->move('','marksheet1_'.$id.'.'.$file->getClientOriginalExtension());
+        $file = $request->file('marksheet1');
+        $file->move('/storage/app','marksheet1_'.$id.'.'.$file->getClientOriginalExtension());
       }
       if($request->hasFile('marksheet2'))
       {
@@ -81,8 +81,8 @@ class FileUploadController extends Controller
         $document->name = 'marksheet2';
         $document->path = $id.'.pdf';
         $document->save();
-        $file = $request->file('marksheet2_');
-        $file->move('','marksheet2_'.$id.'.'.$file->getClientOriginalExtension());
+        $file = $request->file('marksheet2');
+        $file->move('/storage/app','marksheet2_'.$id.'.'.$file->getClientOriginalExtension());
       }
       if($request->hasFile('marksheet3'))
       {
@@ -91,8 +91,8 @@ class FileUploadController extends Controller
         $document->name = 'marksheet3';
         $document->path = $id.'.pdf';
         $document->save();
-        $file = $request->file('marksheet3_');
-        $file->move('','marksheet3_'.$id.'.'.$file->getClientOriginalExtension());
+        $file = $request->file('marksheet3');
+        $file->move('/storage/app','marksheet3_'.$id.'.'.$file->getClientOriginalExtension());
       }
       if($request->hasFile('extra1'))
       {
@@ -101,8 +101,8 @@ class FileUploadController extends Controller
         $document->name = 'extra1';
         $document->path = $id.'.pdf';
         $document->save();
-        $file = $request->file('extra1_');
-        $file->move('','extra1_'.$id.'.'.$file->getClientOriginalExtension());
+        $file = $request->file('extra1');
+        $file->move('/storage/app','extra1_'.$id.'.'.$file->getClientOriginalExtension());
       }
       if($request->hasFile('feeStructure'))
       {
@@ -111,8 +111,8 @@ class FileUploadController extends Controller
         $document->name = 'feeStructure';
         $document->path = $id.'.pdf';
         $document->save();
-        $file = $request->file('extra1_');
-        $file->move('','extra1_'.$id.'.'.$file->getClientOriginalExtension());
+        $file = $request->file('feeStructure');
+        $file->move('/storage/app','feeStructure'.$id.'.'.$file->getClientOriginalExtension());
       }
 
       return view('period_amount');
