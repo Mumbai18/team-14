@@ -396,7 +396,7 @@ function closeNav() {
         <br>
 
         <div class="form-horizontal">
-            <label for="middlename" class="col-lg-4 control-label">Middle Name</label>
+            <label for="middlename" class="col-lg-4 control-label">Last Name</label>
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
             <input type="text" class="form-control" id="MiddleName" name="MiddleName" placeholder="Middle Name"
@@ -434,7 +434,7 @@ function closeNav() {
         </div> 
         <br>
 
-        <!--<div class="form-horizontal">
+        <div class="form-horizontal">
             <label for="gender" class="col-lg-3 control-label">Gender</label>
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
@@ -445,7 +445,7 @@ function closeNav() {
              </select>
             
              </div>
-</div-->
+</div>
 
 
          <div class="form-horizontal">
@@ -458,6 +458,16 @@ function closeNav() {
         </div>
         <br>
 
+         <div class="form-horizontal">
+            <label for="age" class="col-lg-4 control-label">Age</label>
+            <div class="input-group pb-modalreglog-input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
+            <input type="number" class="form-control" id="Age" name="Age" placeholder="Age"
+            value="<?php echo $age ?>">
+        </div> 
+        <br>
+
+
         <div class="form-horizontal">
             <label for="phone" class="col-lg-4 control-label">Phone Number</label>
             <div class="input-group pb-modalreglog-input-group">
@@ -468,13 +478,22 @@ function closeNav() {
         <br>
 
         <div class="form-horizontal">
+            <label for="landline" class="col-lg-4 control-label">Landline</label>
+            <div class="input-group pb-modalreglog-input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
+            <input type="number" class="form-control" id="Landline" name="Landline" placeholder="Landline"
+            value="<?php echo $landline ?>">
+        </div> 
+        <br>
+
+        <!--<div class="form-horizontal">
             <label for="password" class="col-lg-4 control-label">Update Password</label>
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
             <input type="password" class="form-control" id="Password" name="Password" placeholder="Password"
             value="<?php echo $pwd ?>">
         </div> 
-        <br>
+        <br> -->
 
         <div class="form-horizontal">
             <label for="currentaddress" class="col-lg-4 control-label">Current Address</label>
@@ -485,23 +504,23 @@ function closeNav() {
         </div> 
         <br>
 
-         <div class="form-horizontal">
+        <!-- <div class="form-horizontal">
             <label for="permanentaddress" class="col-lg-4 control-label">Permanent Address</label>
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
             <input type="text" class="form-control" id="PermanentAddress" name="PermanentAddress" placeholder="Permanent tAddress"
             value="<?php echo $c_address ?>">
         </div> 
-        <br>
+        <br> -->
 
         <input type="hidden" name="inputtype" value="<?php echo $user_type?>">
 
         <!-- <select class="selectpicker countrypicker"
                                         data-live-search="true"
-                                        data-default="United States"
+                                        data-default="India"
                                         data-flag="true">
-                                </select> -->
-        <!-- <div class="form-horizontal">
+                                </select> 
+             <div class="form-horizontal">
                                         <label for="country" class="col-lg-4 control-label" style="color:red;">Update Country</label>
                                         <div class="input-group pb-modalreglog-input-group">
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-globe"></span></span>
@@ -754,12 +773,71 @@ function closeNav() {
                                                 <option value="EH">Western Sahara</option>
                                                 <option value="YE">Yemen</option>
                                                 <option value="ZM">Zambia</option>
-                                                <option value="ZW">Zimbabwe</option> -->
+                                                <option value="ZW">Zimbabwe</option> 
                                             </select>
                                         </div><br>
                                         </div>
-                                      </div>
-                               
+                                      </div>-->
+                  <div class="form-horizontal">
+            <label for="phone" class="col-lg-4 control-label">PinCode</label>
+            <div class="input-group pb-modalreglog-input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
+            <input type="number" class="form-control" id="Pincode" name="Pincode" placeholder="Pincode"
+            value="<?php echo $pin_code ?>">
+        </div> 
+        <br>
+
+        <div style="float:right;" class="col-md-9">
+        <div class="form-horizontal">
+            <label for="fathername" class="col-lg-4 control-label">Father's Name</label>
+            <div class="input-group pb-modalreglog-input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+            <input type="text" class="form-control" id="FatherName" name="FatherName" placeholder="Father Name" 
+            value="<?php echo $faname ?>">
+        </div> 
+        <br>  
+
+        <div style="float:right;" class="col-md-9">
+        <div class="form-horizontal">
+            <label for="fatherqual" class="col-lg-4 control-label">Father's Qualification</label>
+            <div class="input-group pb-modalreglog-input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+            <input type="text" class="form-control" id="FatherQual" name="FatherQual" placeholder="FatherQual" 
+            value="<?php echo $faqual ?>">
+        </div> 
+        <br>
+
+        <div style="float:right;" class="col-md-9">
+        <div class="form-horizontal">
+            <label for="fatherocc" class="col-lg-4 control-label">Father's Occupation</label>
+            <div class="input-group pb-modalreglog-input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+            <input type="text" class="form-control" id="FatherOcc" name="FatherOcc" placeholder="Father Occupation" 
+            value="<?php echo $faocc ?>">
+        </div> 
+        <br> 
+
+        <div class="form-horizontal">
+            <label for="fatherofficeaddr" class="col-lg-4 control-label">Father's Office Address</label>
+            <div class="input-group pb-modalreglog-input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+            <input type="text" class="form-control" id="faoffaddr" name="faoffaddr" placeholder="Fathers office address"
+            value="<?php echo $faoffaddr?>">
+        </div> 
+        <br>
+
+        <div class="form-horizontal">
+            <label for="faphone" class="col-lg-4 control-label">Father's Phone Number</label>
+            <div class="input-group pb-modalreglog-input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
+            <input type="number" class="form-control" id="FatherPhoneNo" name="FatherPhoneNo" placeholder="FatherPhoneNo"
+            value="<?php echo $faphone_no ?>">
+        </div> 
+        <br>
+
+        
+
+
 
 
 
