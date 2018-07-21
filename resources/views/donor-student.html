@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Bootstrap Example</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   </head>
+   <body>
+    <h1 style="margin-left: 10%; margin-top: 8%; text-align: center; font-family: sans-serif;">LIST OF STUDENTS ACCORDING TO DONORS</h1>
+      <div class="container" style="margin-left: 40%; margin-top: 15%;">
+         <div id="accordion">
+
+            <div class="card">
+               <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                      
+
+                     <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="font-size: 20px;" >
+
+                     <b>Collapsible Group Item #1</b>
+                     </button>
+                  </h5>
+               </div>
+               <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                     <ul>
+                       <li><a href="">Item 1 </a></li>
+                       <li><a href="">Item 2 </a></li>
+                       <li><a href="">Item 3 </a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                      
+
+                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="font-size: 20px;">
+
+                     <b>Collapsible Group Item #2 </b>
+                     </button>
+                  </h5>
+               </div>
+               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                  <div class="card-body">
+                     <ul>
+                       <li><a href="">Item 1 </a></li>
+                       <li><a href="">Item 2 </a></li>
+                       <li><a href="">Item 3 </a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header" id="headingThree">
+                  <h5 class="mb-0">
+                    
+
+                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="font-size: 20px;">
+
+                     <b>Collapsible Group Item #3</b>
+                     </button>
+                  </h5>
+               </div>
+               <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                  <div class="card-body">
+                    <ul>
+                       <li><a href="">Item 1 </a></li>
+                       <li><a href="">Item 2 </a></li>
+                       <li><a href="">Item 3 </a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
+<script type="text/javascript">
+  function collapse(){
+  var x = document.getElementById("collapseOne");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+  }
+</script>
