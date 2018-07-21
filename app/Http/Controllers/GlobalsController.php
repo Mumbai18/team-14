@@ -7,6 +7,9 @@ use App\User;
 use App\Document;
 use DB;
 use Twilio\Rest\Client;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+require 'vendor/autoload.php';
 
 class GlobalsController extends Controller
 {
@@ -43,12 +46,36 @@ class GlobalsController extends Controller
       );
     }
 
-    public function sendMail($mailid='',$message="Hi from JPMC-CFG")
+    public function sendMail($mailid='',$message="Hi from JPMC-CFG",$subject="Subject")
     {
-      Mail::send('emails.welcome', ['key' => 'value'], function($message)
-      {
-          $message->to('foo@example.com', 'John Smith')->subject('Welcome!');
-      });
+      $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
+      try {
+          //Server settings
+          $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+          $mail->isSMTP();                                      // Set mailer to use SMTP
+          $mail->Host = 'smtp1.example.com;smtp2.example.com';  // Specify main and backup SMTP servers
+          $mail->SMTPAuth = true;                               // Enable SMTP authentication
+          $mail->Username = 'user@example.com';                 // SMTP username
+          $mail->Password = 'secret';                           // SMTP password
+          $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+          $mail->Port = 587;                                    // TCP port to connect to
+
+          //Recipients
+          $mail->setFrom('mit@example.com', 'Mailer');
+          $mail->addAddress('mitvparekh9@yahoo.com');     // Add a recipient
+
+
+          //Content
+          $mail->isHTML(false);                                  // Set email format to HTML
+          $mail->Subject = '$subject';
+          $mail->Body    = '$message';
+          
+
+          $mail->send();
+          echo 'Message has been sent';
+      } catch (Exception $e) {
+          echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+      }
     }
 
 
