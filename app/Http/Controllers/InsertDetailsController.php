@@ -58,7 +58,6 @@ class InsertDetails extends Controller
             $student->pincode= $request->pincode;           
             $student->city = $request->city;
             $student->state = $request->state;
-            $student->pincode= $request->pincode;
       		$student->fatherName = $request->fatherName;
       		$student->fatherContact = $request->fatherContact;
       		$student->fatherEmailId = $request->fatherEmailId;
