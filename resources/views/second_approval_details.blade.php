@@ -214,12 +214,12 @@ function closeNav() {
   
   
   <div class="container">
-    <h1 style="color:blue;">Enter Basic Details</h1>
+    <h1 style="color:blue;">Enter Level 2 Details</h1>
   	<hr>
 
      <form method="post" action="insertStudent">
-	  {{ csrf_field() }}
-      <!-- edit form column -->
+	  <!--{{ csrf_field() }}
+      edit form column -->
       <div class="col-md-12 personal-info">
         <!--<div class="alert alert-info alert-dismissable">
           <a class="panel-close close" data-dismiss="alert">×</a> 
@@ -229,8 +229,8 @@ function closeNav() {
 
           <!--</form>-->
         </div>
-      
-        <div id="google_translate_element"></div>
+      <div style="float: left;">
+        <div id="google_translate_element" style=""></div>
  
         <script type="text/javascript">
         function googleTranslateElementInit() {
@@ -241,23 +241,23 @@ function closeNav() {
         <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
  
             
-        <div style="float:right;" class="col-md-9">
+        
         <div class="form-horizontal">
             <label for="owner" class="col-lg-4 control-label">Accomadation on Own or Rented?</label>
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-            <input type="text" class="form-control" id="Owner" name="owner" placeholder="Owner" 
+            <input type="text" class="form-control" id="Owner" name="owner" placeholder="" 
             value="">
         </div> 
         <br>
 
         
-        <div style="float:right;" class="col-md-9">
+        
         <div class="form-horizontal">
             <label for="type" class="col-lg-4 control-label">Type of Accomadation</label>
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-            <input type="text" class="form-control" id="Type" name="type" placeholder="Type"
+            <input type="text" class="form-control" id="Type" name="type" placeholder=""
             value="">
         </div> 
         <br>
@@ -280,7 +280,7 @@ function closeNav() {
             <label for="mincome" class="col-lg-4 control-label">Mother's Income</label>
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
-            <input type="number" class="form-control" id="Mincome" name="mincome" placeholder="Mincome"
+            <input type="number" class="form-control" id="Mincome" name="mincome" placeholder="Value"
             value="">
         </div> 
         <br>
@@ -289,7 +289,7 @@ function closeNav() {
             <label for="fincome" class="col-lg-4 control-label">Father's Income</label>
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
-            <input type="number" class="form-control" id="Fincome" name="fincome" placeholder="Fincome"
+            <input type="number" class="form-control" id="Fincome" name="fincome" placeholder="Value"
             value="">
         </div> 
         <br>
@@ -298,7 +298,7 @@ function closeNav() {
             <label for="sincome" class="col-lg-4 control-label">Sibling's Income</label>
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
-            <input type="number" class="form-control" id="Sincome" name="sincome" placeholder="Sincome"
+            <input type="number" class="form-control" id="Sincome" name="sincome" placeholder="Value"
             value="">
         </div> 
         <br>
@@ -307,7 +307,7 @@ function closeNav() {
             <label for="grant" class="col-lg-4 control-label">Grant Received From Government If Any</label>
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
-            <input type="number" class="form-control" id="Grant" name="grant" placeholder="Grant"
+            <input type="number" class="form-control" id="Grant" name="grant" placeholder="Amount"
             value="">
         </div> 
         <br>
@@ -316,12 +316,12 @@ function closeNav() {
             <label for="tieup" class="col-lg-4 control-label">NGOs Tied Up With</label>
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
-            <input type="number" class="form-control" id="Tieup" name="tieup" placeholder="Tieup"
+            <input type="number" class="form-control" id="Tieup" name="tieup" placeholder="Name"
             value="">
         </div> 
         <br>
 
-        <table>
+        <table style="border: 2 px ">
             <tr>
                 <td>Level</td>
                 <td>Board</td>
@@ -347,7 +347,7 @@ function closeNav() {
                 <td><input type="number" name="mmmarks"></td>
             </tr> 
         </table>
-
+        <br>
         <div class="form-horizontal">
             <label for="sports" class="col-lg-4 control-label">Sports Achievements</label>
             <div class="input-group pb-modalreglog-input-group">
@@ -356,7 +356,7 @@ function closeNav() {
             value="">
         </div> 
         <br>
-
+</div>
 
         <!--<br>
          <div class="form-horizontal">
