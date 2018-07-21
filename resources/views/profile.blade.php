@@ -1,5 +1,5 @@
 @include(nav_side)
-@section
+@section('content')
 	<div class="container" style="width:100%">
         <div class="row">
         <br>
