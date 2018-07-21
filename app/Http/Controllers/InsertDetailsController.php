@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\User;
 use App\Student;
@@ -70,7 +70,7 @@ class InsertDetailsController extends Controller
       $student->totalFamilyIncome = $request->totalFamilyIncome;
       $student->totalBurden = $request->totalBurden;
       $student->totalNoOfMembers = $request->totalNoOfMembers;
-
+      $student->user_id = Auth::user()->id;
       $student->save();
 
       return view('studentstatus');

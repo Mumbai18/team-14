@@ -15,6 +15,7 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->unique()->references('id')->on('users');
             $table->string('firstName');
             $table->string('lastName');
             $table->string('emailId');
@@ -45,7 +46,6 @@ class CreateStudentsTable extends Migration
              $table->string('totalNoOfMembers');
              $table->string('totalBurden');
              $table->string('educonID')->nullable();
-             $table->integer('status')->default('0');
             $table->timestamps();
         });
     }

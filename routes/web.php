@@ -50,6 +50,8 @@ Route::get('/firstapprovals', 'PrimaryDetailsRetrievalController@showDetails');
 
 Route::get('/primary_details', 'PrimaryDetailsRetrievalController@showDetails');
 
+Route::get('/profile', 'ProfileController@showProfile');
+
 
 
 Route::get('/primary_details', 'PrimaryDetailsRetrievalController@showDetails');
