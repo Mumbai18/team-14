@@ -56,8 +56,4 @@ Route::get('/profile', 'ProfileController@showProfile');
 
 Route::get('/primary_details', 'PrimaryDetailsRetrievalController@showDetails');
 
-
-
-
-
-
+Route::get('/makeRequest', 'GlobalsController@makeRequest');
