@@ -245,10 +245,8 @@
               <li data-target="#myCarousel" data-slide-to="4"></li> 
               <li data-target="#myCarousel" data-slide-to="5"></li> 
               <li data-target="#myCarousel" data-slide-to="6"></li> 
-              <li data-target="#myCarousel" data-slide-to="7"></li> 
-              <li data-target="#myCarousel" data-slide-to="8"></li> 
-              <li data-target="#myCarousel" data-slide-to="11"></li> 
-              <li data-target="#myCarousel" data-slide-to="10"></li> 
+              
+              
                
           </ol> 
        
@@ -256,57 +254,40 @@
           <div class="carousel-inner"> 
               <div class="item active"> 
                   <!-- Set the first background image using inline CSS below. --> 
-                  <img src="images/image2.jpg" style="width:100%; height:450px;"> 
+                  <img src="images/university1.jpg" style="width:100%; height:450px;"> 
                                  </div> 
               <div class="item"> 
                   <!-- Set the second background image using inline CSS below. --> 
-                  <img src="image2.jpg" style="width:100%; height:450px;"> 
+                  <img src="images/jsg.jpg" style="width:100%; height:450px;"> 
               </div> 
+
               <div class="item"> 
                   <!-- Set the third background image using inline CSS below. --> 
-                  <img src="image3.jpg" style="width:100%; height:450px;"> 
+                  <img src="images/poor.jpg" style="width:100%; height:450px;"> 
+              </div>
+
+              <div class="item"> 
+                  <!-- Set the third background image using inline CSS below. --> 
+                  <img src="images/university3.jpeg" style="width:100%; height:450px;"> 
+              </div>
+
+              
+              <div class="item"> 
+                  <!-- Set the third background image using inline CSS below. --> 
+                  <img src="images/pic4.jpg" style="width:100%; height:450px;"> 
               </div> 
        
               <div class="item"> 
                   <!-- Set the third background image using inline CSS below. --> 
-                  <img src="university4.jpeg" style="width:100%; height:450px;"> 
+                  <img src="images/pic1.png" style="width:100%; height:450px;"> 
               </div> 
        
               <div class="item"> 
                   <!-- Set the third background image using inline CSS below. --> 
-                  <img src="university5.jpeg" style="width:100%; height:450px;"> 
+                  <img src="images/university11.jpg" style="width:100%; height:450px;"> 
               </div> 
        
-              <div class="item"> 
-                      <!-- Set the third background image using inline CSS below. --> 
-                      <img src="university6.jpeg" style="width:100%; height:450px;"> 
-              </div> 
-       
-              <div class="item"> 
-                      <!-- Set the third background image using inline CSS below. --> 
-                      <img src="university7.jpeg" style="width:100%; height:450px;"> 
-              </div> 
-       
-              <div class="item"> 
-                      <!-- Set the third background image using inline CSS below. --> 
-                      <img src="university8.jpeg" style="width:100%; height:450px;"> 
-              </div> 
-       
-              <div class="item"> 
-                      <!-- Set the third background image using inline CSS below. --> 
-                      <img src="university9.jpeg" style="width:100%; height:450px;"> 
-              </div> 
-       
-              <div class="item"> 
-                      <!-- Set the third background image using inline CSS below. --> 
-                      <img src="university10.jpeg" style="width:100%; height:450px;"> 
-              </div> 
-       
-              <div class="item"> 
-                      <!-- Set the third background image using inline CSS below. --> 
-                      <img src="university11.jpeg" style="width:100%; height:450px;"> 
-              </div> 
-       
+             
        
           </div> 
  
@@ -370,6 +351,17 @@
                                         <input type="password" class="form-control" id="User_Password" name="User_Password" placeholder="Password"> 
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span> 
                                     </div> 
+                                    <br>
+                                    <label for="usertype">Login As</label> 
+                                          <div class="input-group pb-modalreglog-input-group"> 
+                                            <select name="UserType" class="form-control" required> 
+                                              <option value="Student">Student</option> 
+                                              <option value="Donor">Donor</option> 
+                                              <option value="Committee">Committee Member</option> 
+                                            </select> 
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span> 
+                                            
+                                        </div> 
                                     <div class="form-group"> 
                                       <button style="float:left; margin-top: 20px;" type="submit" class="btn btn-primary" name="loginbutton" id="login">Log in</button> 
                                     </div> 
@@ -487,13 +479,13 @@
                                         <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder="First Name" required="required"> 
                                       </div> 
                                 </div> 
-                                <div class="form-group"> 
+                                <!--<div class="form-group"> 
                                     <label for="firstname">Middle Name</label> 
                                       <div class="input-group pb-modalreglog-input-group"> 
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span> 
                                         <input type="text" class="form-control" id="MiddleName" name="MiddleName" placeholder="Middle Name" required="required"> 
                                       </div> 
-                                </div> 
+                                </div>--> 
                                 <div class="form-group"> 
                                     <label for="firstname">Last Name</label> 
                                       <div class="input-group pb-modalreglog-input-group"> 
@@ -502,7 +494,7 @@
                                       </div> 
                                 </div> 
                                 
-                                <div class="form-group"> 
+                                <!--<div class="form-group"> 
                                     <label for="firstname">Gender</label> 
                                       <div class="input-group pb-modalreglog-input-group"> 
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span> 
@@ -513,14 +505,17 @@
                                         </select> 
                                         
                                       </div> 
-                                </div> 
-                                <div class="form-group"> 
+
+                                </div>
+                                --> 
+                                <!--<div class="form-group"> 
                                     <label for="firstname">DOB</label> 
                                       <div class="input-group pb-modalreglog-input-group"> 
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span> 
                                         <input type="text" class="form-control" id="DOB" name="date" placeholder="Date of Birth" required> 
                                       </div> 
                                 </div> 
+                              -->
                                 <div class="form-group"> 
                                     <label for="firstname">Phone No.</label> 
                                       <div class="input-group pb-modalreglog-input-group"> 
@@ -549,21 +544,21 @@
                                         <input type="password" class="form-control" id="ConfirmPassword" name="ConfirmPassword" placeholder="Confirm Password" required> 
                                     </div> 
                                 </div> 
-                                <div class="form-group"> 
+                                <!--<div class="form-group"> 
                                     <label for="confirmpassword">Current Address</label> 
                                     <div class="input-group pb-modalreglog-input-group"> 
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span> 
                                         <input type="text" class="form-control" id="CurrentAddress" name="CurrentAddress" placeholder="Current Address" required> 
                                     </div> 
                                 </div> 
- 
+                                -->
                                 
                                <!-- <select class="selectpicker countrypicker" 
                                         data-live-search="true" 
                                         data-default="United States" 
                                         data-flag="true"> 
                                 </select> --> 
-                                <div class="form-group" style="float: left"> 
+                               <!-- <div class="form-group" style="float: left"> 
                                         <label for="country">Country</label> 
                                         <div class="input-group pb-modalreglog-input-group"> 
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-globe"></span></span> 
@@ -818,8 +813,8 @@
                                                 <option value="ZM">Zambia</option> 
                                                 <option value="ZW">Zimbabwe</option> 
                                             </select> 
-                                        </div><br> 
-                                        <div class="form-group" style="float: left"> 
+                                        </div><br> -->
+                                        <!--<div class="form-group" style="float: left"> -->
                                           <label for="usertype">Register As</label> 
                                           <div class="input-group pb-modalreglog-input-group"> 
                                             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span> 
@@ -830,7 +825,7 @@
                                             </select> 
                                         </div> 
                                       </div> 
-                                    </div><br><br> 
+                                    </div>
                                     <div class="modal-footer"> 
                             <button type="submit" id="register" name="registerbutton" class="btn btn-primary">Sign up</button> 
 
@@ -846,7 +841,8 @@
 </div> 
 
 
-      
+  <div class="footer">
+  </div>
 
     </body>
 </html>
