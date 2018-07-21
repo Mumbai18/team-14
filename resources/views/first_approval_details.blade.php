@@ -238,7 +238,7 @@ function closeNav() {
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
             <input type="text" class="form-control" id="FirstName" name="firstName" placeholder="First Name" 
-            value="">
+            value="{{ $user->firstname }}">
         </div> 
         <br>
 
@@ -249,7 +249,7 @@ function closeNav() {
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
             <input type="text" class="form-control" id="LastName" name="lastName" placeholder="Last Name"
-            value="">
+            value="{{ $user->lastname }}">
         </div> 
         <br>
 
@@ -261,7 +261,7 @@ function closeNav() {
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
             <input type="text" class="form-control" id="Email" name="emailId" placeholder="Email"
-            value="">
+            value="{{ $user->email }}">
         </div> 
         <br>
 

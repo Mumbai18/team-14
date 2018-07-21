@@ -1,16 +1,10 @@
-<?php 
-	include(nav_side.blade.php);
- ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Personal Details</title>
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
 
 <h2>Upload Personal details</h2>
     <div class="container" style="width:100%;">  
-        <form method="post" action="" enctype="multipart/form-data"> 
+        <form method="post" action="uploadDocuments" enctype="multipart/form-data"> 
         <h3>Aadhar Card</h3>  
         <br/>
         <div class="col-md-12">  
@@ -153,6 +147,4 @@
      </div>     
      
 
-
- </body>
-</html>
+@endsection

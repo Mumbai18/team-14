@@ -47,7 +47,7 @@ class GlobalsController extends Controller
     {
       Mail::send('emails.welcome', ['key' => 'value'], function($message)
       {
-          $message->to('foo@example.com', 'John Smith')->subject('Welcome!');
+          $message->to('mitvparekh9@yahoo.com', 'John Smith')->subject('Welcome!');
       });
     }
 

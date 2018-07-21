@@ -3,10 +3,7 @@
     <head> 
         <title>Home Page</title> 
         <meta charset="utf-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1"> 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
@@ -182,8 +179,8 @@
         
           <div id="mySidenav" class="sidenav" > 
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> 
-        <a href="#">Upload Documents</a> 
-        <a href="#">Appply for Dontation</a> 
+        <a href="/upload_documents">Upload Documents</a> 
+        <a href="/first_approval_details">Appply for Donation</a> 
         <a href="#">Application Status</a> 
         <a href="#">Your Profile</a> 
         <a href="#">Chat</a> 
@@ -215,9 +212,32 @@
 
               <li class="active"><a href="index.blade.php">Home</a></li> 
               <li><a href="#">Services</a></li> 
-              <li><a href="#">About Us</a></li>   
-              <li><a href="/register" data-toggle="" data-target=""><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> 
-              <li><a href="/login" data-toggle="" data-target=""><span class="glyphicon glyphicon-log-in"></span> Login</a></li> 
+              <li><a href="#">About Us</a></li>  
+              @if (Auth::guest())
+                            <li><a href="/register" data-toggle="" data-target=""><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> 
+              <li><a href="/login" data-toggle="" data-target=""><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              @else
+              <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    {{ Auth::user()->firstname }} <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li> 
+              @endif
+               
             </ul> 
           </div> 
         </div>   

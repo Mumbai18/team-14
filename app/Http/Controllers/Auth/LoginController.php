@@ -25,7 +25,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/first_approval_details';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.

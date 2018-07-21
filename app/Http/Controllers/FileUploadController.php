@@ -7,7 +7,7 @@ use User;
 use Document;
 use DB;
 
-class FileUpload extends Controller
+class FileUploadController extends Controller
 {
     public function uploadFile(Request $request)
     {
@@ -115,7 +115,9 @@ class FileUpload extends Controller
         $file->move('','extra1_'.$id.'.'.$file->getClientOriginalExtension());
       }
 
+      return view('period_amount');
+
     }
 }
 
-?>
+
