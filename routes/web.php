@@ -34,7 +34,9 @@ Route::get('/first_approval_details', function () {
     return view('first_approval_details');
 });
 
-//Route::get('/first_approval_details', 'PrimaryDetailsController@enterPrimaryDetails');
+
+Route::get('/primary_details', 'PrimaryDetailsRetrievalController@showDetails');
+
 
 
 
