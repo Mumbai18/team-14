@@ -42,6 +42,10 @@ class CreateStudentsTable extends Migration
             $table->string('motherEmailId')->nullable();
             $table->string('motherQualification')->nullable();
             $table->string('motherOfficeAddress')->nullable();
+             $table->string('totalFamilyIncome');
+             $table->string('totalNoOfMembers');
+             $table->string('totalBurden');
+             $table->string('educonID')->nullable();
             $table->timestamps();
         });
     }
