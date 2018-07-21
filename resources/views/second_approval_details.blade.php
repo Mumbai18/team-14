@@ -268,7 +268,7 @@ function closeNav() {
         <div class="form-horizontal">
             <label for="pension" class="col-lg-4 control-label">Eligible for Pension?</label>
             <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+            <span class="input-group-addon"><span class="fa fa-rupee"></span></span>
             <select name="pension" class="form-control">
             <option value="Y">Yes</option>
             <option value="N">No</option>
@@ -279,7 +279,7 @@ function closeNav() {
         <div class="form-horizontal">
             <label for="mincome" class="col-lg-4 control-label">Mother's Income</label>
             <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
+            <span class="input-group-addon"><span class="fa fa-rupee"></span></span>
             <input type="number" class="form-control" id="Mincome" name="mincome" placeholder="Value"
             value="">
         </div> 
@@ -288,7 +288,7 @@ function closeNav() {
         <div class="form-horizontal">
             <label for="fincome" class="col-lg-4 control-label">Father's Income</label>
             <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
+            <span class="input-group-addon"><span class="fa fa-rupee"></span></span>
             <input type="number" class="form-control" id="Fincome" name="fincome" placeholder="Value"
             value="">
         </div> 
@@ -297,7 +297,7 @@ function closeNav() {
         <div class="form-horizontal">
             <label for="sincome" class="col-lg-4 control-label">Sibling's Income</label>
             <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
+            <span class="input-group-addon"><span class="fa fa-rupee"></span></span>
             <input type="number" class="form-control" id="Sincome" name="sincome" placeholder="Value"
             value="">
         </div> 
@@ -306,7 +306,7 @@ function closeNav() {
         <div class="form-horizontal">
             <label for="grant" class="col-lg-4 control-label">Grant Received From Government If Any</label>
             <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
+            <span class="input-group-addon"><span class="fa fa-rupee"></span></span>
             <input type="number" class="form-control" id="Grant" name="grant" placeholder="Amount"
             value="">
         </div> 
@@ -315,13 +315,13 @@ function closeNav() {
         <div class="form-horizontal">
             <label for="tieup" class="col-lg-4 control-label">NGOs Tied Up With</label>
             <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
+            <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
             <input type="number" class="form-control" id="Tieup" name="tieup" placeholder="Name"
             value="">
         </div> 
         <br>
 
-        <table style="border: 2 px ">
+        <table style="border: 2px; align-items: center; ">
             <tr>
                 <td>Level</td>
                 <td>Board</td>
@@ -351,7 +351,7 @@ function closeNav() {
         <div class="form-horizontal">
             <label for="sports" class="col-lg-4 control-label">Sports Achievements</label>
             <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+            <span class="input-group-addon"><span class="glyphicon glyphicon-education"></span></span>
             <input type="text" class="form-control" id="sports" name="sports" placeholder="Sports"
             value="">
         </div> 
