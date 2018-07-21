@@ -99,6 +99,13 @@ public function updateFirstStatus(Request $request){
 
 }
 
+public function storeAfterVerification(Request $request){
+      $student = Auth::user();
+      $student->period = $request->period;
+      $student->amountRequired = $request->amountRequired;
+      $student->save();
+}
+
 //doc verification done
     public function scrutiny(Request $request){
       $studid = $request->statuses;  
