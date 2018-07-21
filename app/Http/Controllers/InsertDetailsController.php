@@ -103,6 +103,7 @@ public function storeAfterVerification(Request $request){
       $student = Auth::user();
       $student->period = $request->period;
       $student->amountRequired = $request->amountRequired;
+      $student->score = ($student->totalFamilyIncome - $student->totalBurden)/$student->totalNoOfMembers;
       $student->save();
 }
 

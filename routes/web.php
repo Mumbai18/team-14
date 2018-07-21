@@ -29,6 +29,11 @@ Route::post('/updateFirstStatus', [
     'uses' => 'InsertDetailsController@updateFirstStatus'
   ]);
 
+Route::post('/updatePeriodAmt', [
+    'as' => 'update.periodamt',
+    'uses' => 'InsertDetailsController@storeAfterVerification'
+  ]);
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -39,8 +44,8 @@ Route::get('/first_approval_details', function () {
     return view('first_approval_details');
 });
 
-Route::get('/student_status', function () {
-    return view('');
+Route::get('/afterVerify', function () {
+    return view('period_amount');
 });
 
 Route::get('/firstapprovals', 'PrimaryDetailsRetrievalController@showDetails');
