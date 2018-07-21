@@ -27,8 +27,7 @@ class CreateStudentsTable extends Migration
             $table->string('stream')->nullable();
             $table->string('major')->nullable();
             $table->string('caste');
-            $table->string('addressLine1');
-            $table->string('addressLine2');
+            $table->string('currentAddress');
             $table->string('pincode');
             $table->string('city');
             $table->string('state');
