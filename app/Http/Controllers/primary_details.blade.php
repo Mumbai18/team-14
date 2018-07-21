@@ -1,20 +1,24 @@
-@section
-    @foreach($request as $row)
+<!DOCTPE html>
+    <html>
+        <head>
+            <title>View Student Records</title>
+        </head>
+        <body>
+            <table border = "1">
+            <tr>
+            <td>Id</td>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Email</td>
+            </tr>
+            @foreach ($users as $user)
                 <tr>
-                    <td>{{$row->id}}</td>
-                    <td>{{$row->firstName}}</td>
-                    <td>{{$row->lastName}}</td>
-                    <td>{{$row->emailId}}</td>
-                    <td>{{$row->emailId}}</td>
-                    <td>{{$row->emailId}}</td>
-                    <td>{{$row->emailId}}</td>
-                    
-                    <td>
-                        <button type="button" class="btn btn-primary">View</button>
-                        <button type="button" class="btn btn-success">Edit</button>
-                        <button type="button" class="btn btn-danger">Delete</button>
-                    </td>
+                <td>{{ $result->id }}</td>
+                <td>{{ $result->firstName }}</td>
+                <td>{{ $result->lastName }}</td>
+                <td>{{ $result->emailId }}</td>
                 </tr>
             @endforeach
-        ?>
-@endsection
+    </table>
+    </body>
+</html>
