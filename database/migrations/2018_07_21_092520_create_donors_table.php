@@ -15,14 +15,12 @@ class CreateDonorsTable extends Migration
     {
         Schema::create('donors', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
             $table->string('firstName');
             $table->string('lastName');
             $table->string('mobileNo');
             $table->string('address');
             $table->string('pincode');
             $table->string('aadharNo');
-            $table->string('pincode');
             $table->string('city');
             $table->string('state');
             $table->string('country');
