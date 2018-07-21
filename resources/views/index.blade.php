@@ -170,11 +170,15 @@
        
       <!-- side bar ends--> 
       </div> 
-          <a class="navbar-brand" href="index.html" style="padding-left:50px;color:white;">Egnitia Admissions</a> 
+
+          <img src="images/jsg.jpg" style="float:left;width:100px;height:50px;">
+          <a class="navbar-brand" href="index.html" style="padding-left:50px;color:white;">Educon : By Jain Social Group</a> 
           </div> 
            
             <ul class="nav navbar-nav navbar-right"> 
-       
+              
+              <!-- <li><img src="../../public/images/jsg.jpg"></li> -->
+
               <li class="active"><a href="indsbbsbex.html">Home</a></li> 
               <li><a href="#">Services</a></li> 
               <li><a href="#">About Us</a></li>   
