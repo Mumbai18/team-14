@@ -215,8 +215,8 @@
               <li class="active"><a href="index.blade.php">Home</a></li> 
               <li><a href="#">Services</a></li> 
               <li><a href="#">About Us</a></li>   
-              <li><a href="#" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> 
-              <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> 
+              <li><a href="/register" data-toggle="" data-target=""><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> 
+              <li><a href="/login" data-toggle="" data-target=""><span class="glyphicon glyphicon-log-in"></span> Login</a></li> 
             </ul> 
           </div> 
         </div>   
