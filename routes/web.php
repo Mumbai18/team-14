@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('index');
 });
+
+Route::post('/insertStudent', [
+    'as' => 'insert.Student',
+    'uses' => 'InsertDetailsController@storeStudentDetails'
+  ]);

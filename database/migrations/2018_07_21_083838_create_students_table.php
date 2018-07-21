@@ -32,7 +32,6 @@ class CreateStudentsTable extends Migration
             $table->string('pincode');
             $table->string('city');
             $table->string('state');
-            $table->string('country');
             $table->string('fatherName');
             $table->string('fatherContact');
             $table->string('fatherEmailId');
