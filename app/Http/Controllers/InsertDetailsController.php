@@ -80,14 +80,35 @@ class InsertDetailsController extends Controller
 public function updateFirstStatus(Request $request){
       
       $status = $request->statuses;
-      $i=0;
       foreach($status as $s){
             $stud = Student::find($s);
             $stud->status = 1;
             $stud->save();
+            $vol = Volunteer::where('assignedTo','!=',null)->first();
+            if($vol != null)
+            {
+                  $volun = Volunteer::find($vol->id);
+                  $volun->assignedTo = $s;
+                  $volun->save();
+                  
+            }
       }
 
+      //call message and mail controller
+      
+
 }
+
+//doc verification done
+    public function scrutiny(Request $request){
+      $studid = $request->statuses;  
+      $stud = Student::find($studid);
+      $stud->status = 2;
+      $stud->save();
+    }
+}
+
+
 
 
 }
