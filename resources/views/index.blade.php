@@ -52,6 +52,109 @@
       }; 
       date_input.datepicker(options); 
     }); 
+
+
+    <style> 
+    .pb-modalreglog-container 
+    { 
+        margin-top: 100px; 
+    } 
+ 
+    .pb-modalreglog-legend 
+    { 
+        text-align: center; 
+    } 
+ 
+    .pb-modalreglog-input-group 
+    { 
+        margin: auto; 
+    } 
+ 
+    .pb-modalreglog-submit 
+    { 
+        margin-left: 5px; 
+    } 
+ 
+    .pb-modalreglog-form-reg 
+    { 
+        text-align: center; 
+    } 
+ 
+    .pb-modalreglog-footer p 
+    { 
+        text-align: center; 
+        margin-top: 20px; 
+    } 
+ 
+    #pb-modalreglog-progressbar 
+    { 
+        border-radius: 2px; 
+    } 
+</style> 
+ 
+<script> 
+    $(function () { 
+        var progress = $("#pb-modalreglog-progressbar").shieldProgressBar({ 
+            value: 0 
+        }).swidget(); 
+ 
+        $('#inputEmail').change(function () { 
+            if ($('#inputEmail').val().length > 1) { 
+                progress.value(progress.value() + 15); 
+            } else { 
+                progress.value(progress.value() - 15); 
+            } 
+        }); 
+ 
+        $('#inputPws').change(function () { 
+            if ($('#inputPws').val().length > 1) { 
+                progress.value(progress.value() + 15); 
+            } else { 
+                progress.value(progress.value() - 15); 
+            } 
+        }); 
+ 
+        $('#inputConfirmPws').change(function () { 
+            if ($('#inputConfirmPws').val().length > 1) { 
+                progress.value(progress.value() + 15); 
+            } else { 
+                progress.value(progress.value() - 15); 
+            } 
+        }); 
+ 
+        $('#countries').change(function () { 
+            if ($('#countries').val().length > 1) { 
+                progress.value(progress.value() + 15); 
+            } else { 
+                progress.value(progress.value() - 15); 
+            } 
+        }); 
+ 
+        $('#age').change(function () { 
+            if ($('#age').val().length > 1) { 
+                progress.value(progress.value() + 15); 
+            } else { 
+                progress.value(progress.value() - 15); 
+            } 
+        }); 
+ 
+        $('#ch').change(function () { 
+            if ($('input[name="chs"]:checked').length > 0) { 
+                progress.value(progress.value() + 25); 
+            } else { 
+                progress.value(progress.value() - 25); 
+            } 
+        }); 
+ 
+        $("#age").shieldMaskedTextBox({ 
+            enabled: true, 
+            mask: "00/00/0000", 
+            value: "19/03/1032" 
+        }); 
+    }) 
+</script> 
+ 
+
 </script> 
  
         <!-- CSS for Nav Bar-->
@@ -183,6 +286,7 @@
         <a href="/first_approval_details">Appply for Donation</a> 
         <a href="#">Application Status</a> 
         <a href="#">Your Profile</a> 
+    
         <a href="#">Chat</a> 
       </div> 
        
