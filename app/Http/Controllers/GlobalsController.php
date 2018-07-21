@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use User;
 use Document;
 use DB;
+use Twilio\Rest\Client;
 
 class FileUpload extends Controller
 {
@@ -23,7 +24,7 @@ class FileUpload extends Controller
       require __DIR__ . '../../vendor/autoload.php';
 
       // Use the REST API Client to make requests to the Twilio REST API
-      use Twilio\Rest\Client;
+
 
       // Your Account SID and Auth Token from twilio.com/console
       require _DIR_ . './secrets.php';
@@ -42,7 +43,12 @@ class FileUpload extends Controller
       );
     }
 
-  
+    public function sendMail($mailid='',$message="Hi from JPMC-CFG")
+    {
+
+    }
+
+
 }
 
 ?>
