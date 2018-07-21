@@ -218,7 +218,7 @@ function closeNav() {
   	<hr>
 
      <form method="post" action="insertStudent">
-	  
+	  {{ csrf_field() }}
       <!-- edit form column -->
       <div class="col-md-12 personal-info">
         <!--<div class="alert alert-info alert-dismissable">
@@ -327,19 +327,10 @@ function closeNav() {
         <br>
 
         <div class="form-horizontal">
-            <label for="currentaddress" class="col-lg-4 control-label">Address Line 1</label>
+            <label for="currentAddress" class="col-lg-4 control-label">Current Address</label>
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
-            <input type="text" class="form-control" id="addressLine1" name="addressLine1" placeholder="Address Line 1"
-            value="">
-        </div> 
-        <br>
-
-        <div class="form-horizontal">
-            <label for="currentaddress" class="col-lg-4 control-label">Address Line 2</label>
-            <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
-            <input type="text" class="form-control" id="addressLine2" name="addressLine2" placeholder="Address Line 2"
+            <input type="text" class="form-control" id="currentAddress" name="currentAddress" placeholder="Current Address"
             value="">
         </div> 
         <br>
@@ -539,7 +530,7 @@ function closeNav() {
             <label for="members" class="col-lg-4 control-label">Total Family Members</label>
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
-            <input type="number" class="form-control" id="Members" name="totalFamilyMembers" placeholder="Members"
+            <input type="number" class="form-control" id="Members" name="totalNoOfMembers" placeholder="Members"
             value="">
         </div> 
         <br>

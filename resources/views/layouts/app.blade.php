@@ -10,6 +10,12 @@
 
     <title>{{ config('app.name', 'JSG') }}</title>
 
+    <script>
+            window.Laravel = <?php echo json_encode([
+                'csrfToken' => csrf_token(),
+            ]); ?>
+        </script>
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
