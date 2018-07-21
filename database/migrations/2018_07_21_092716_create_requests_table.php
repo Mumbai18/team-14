@@ -16,6 +16,8 @@ class CreateRequestsTable extends Migration
         Schema::create('requests', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->string('number');
+            $table->string('pinCode');
         });
     }
 

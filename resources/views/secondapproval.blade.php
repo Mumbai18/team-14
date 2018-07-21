@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -33,40 +25,25 @@
     <thead>
       <tr>
         <th style="text-align: center;">Name</th>
-        <th style="text-align: center;">Course</th>
         <th style="text-align: center;">Requested Amount</th>
         <th style="text-align: center;">Disbursed Amount</th>
         <th style="text-align: center;">Approval</th>
       </tr>
     </thead>
     <tbody>
+    @foreach($allstudents as $stu)
       <tr>
-        <td>John</td>
-        <td>ENGG.</td>
-        <td>100</td>
+        <td>{{ $stu->firstName }} {{ $stu->lastName }}</td>
+        <td>{{ $stu->amountRequired }}</td>
         <td><input type="text" name=""></td>
         <td><button type="button" class="btn btn-success">Approve</button>
         <button type="button" class="btn btn-danger">Reject</button></td>
       </tr>
-      <tr>
-        <td>John</td>
-        <td>ENGG.</td>
-        <td>100</td>
-        <td><input type="text" name=""></td>
-        <td><button type="button" class="btn btn-success">Approve</button>
-        <button type="button" class="btn btn-danger">Reject</button></td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>ENGG.</td>
-        <td>100</td>
-        <td><input type="text" name=""></td>
-        <td><button type="button" class="btn btn-success">Approve</button>
-        <button type="button" class="btn btn-danger">Reject</button></td>
-      </tr>
+      @endforeach
     </tbody>
   </table>
 </div>
 
-</body>
-</html>
+@endsection
+
+

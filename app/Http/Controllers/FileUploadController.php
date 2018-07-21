@@ -104,6 +104,16 @@ class FileUpload extends Controller
         $file = $request->file('extra1_');
         $file->move('','extra1_'.$id.'.'.$file->getClientOriginalExtension());
       }
+      if($request->hasFile('feeStructure'))
+      {
+        $document = new Document;
+        $document->userId = $id;
+        $document->name = 'feeStructure';
+        $document->path = $id.'.pdf';
+        $document->save();
+        $file = $request->file('extra1_');
+        $file->move('','extra1_'.$id.'.'.$file->getClientOriginalExtension());
+      }
 
     }
 }
