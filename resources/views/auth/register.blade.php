@@ -11,15 +11,29 @@
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">Name</label>
+                        <div class="form-group{{ $errors->has('firstname') ? ' has-error' : '' }}">
+                            <label for="firstname" class="col-md-4 control-label">First Name</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="firstname" type="text" class="form-control" name="firstname" value="{{ old('firstname') }}" required autofocus>
 
-                                @if ($errors->has('name'))
+                                @if ($errors->has('firstname'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                        <strong>{{ $errors->first('firstname') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('lastname') ? ' has-error' : '' }}">
+                            <label for="lastname" class="col-md-4 control-label">Last Name</label>
+
+                            <div class="col-md-6">
+                                <input id="lastname" type="text" class="form-control" name="lastname" value="{{ old('lastname') }}" required autofocus>
+
+                                @if ($errors->has('lastname'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('lastname') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -34,6 +48,20 @@
                                 @if ($errors->has('email'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('contact') ? ' has-error' : '' }}">
+                            <label for="contact" class="col-md-4 control-label">Contact</label>
+
+                            <div class="col-md-6">
+                                <input id="contact" type="text" class="form-control" name="contact" value="{{ old('contact') }}" required>
+
+                                @if ($errors->has('contact'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('contact') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -60,6 +88,22 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
+
+                        <div class="form-group{{ $errors->has('role') ? ' has-error' : '' }}">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <span><i class="fa fa-id-badge" aria-hidden="true"></i>
+                                                        </span> 
+                                                    </div>
+                                                    <select class="form-control" id="role" name="role" value="{{ old('role') }}">
+                                                        <option value="Student">Student</option>
+                                                        <option value="Donor">Donor</option>
+                                                        <option value="Volunteer">Volunteer</option>
+                                                        <option value="Core">Core</option>
+                                                        <option value="Committee">Committee</option>
+                                                    </select>
+                                                </div>
+                                            </div>
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">

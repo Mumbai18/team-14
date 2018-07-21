@@ -39,6 +39,27 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('role') ? ' has-error' : '' }}">
+                            <label for="role" class="col-md-4 control-label">Role</label>
+
+                            <div class="col-md-6">
+                            <select class="form-control" id="role" name="role" value="{{ old('role') }}">
+                                                        <option value="Student">Student</option>
+                                                        <option value="Donor">Donor</option>
+                                                        <option value="Volunteer">Volunteer</option>
+                                                        <option value="Core">Core</option>
+                                                        <option value="Committee">Committee</option>
+                                                    </select>
+                                
+
+                                @if ($errors->has('role'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('role') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <div class="checkbox">
