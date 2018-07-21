@@ -24,6 +24,11 @@ Route::post('/insertStudent', [
     'uses' => 'InsertDetailsController@storeStudentDetails'
   ]);
 
+Route::post('/updateFirstStatus', [
+    'as' => 'update.firststatus',
+    'uses' => 'InsertDetailsController@updateFirstStatus'
+  ]);
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

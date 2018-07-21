@@ -78,6 +78,14 @@ class InsertDetailsController extends Controller
 }
 
 public function updateFirstStatus(Request $request){
+      
+      $status = $request->statuses;
+      $i=0;
+      foreach($status as $s){
+            $stud = Student::find($s);
+            $stud->status = 1;
+            $stud->save();
+      }
 
 }
 

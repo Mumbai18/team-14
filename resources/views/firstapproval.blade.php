@@ -5,7 +5,8 @@
    
       <div class="container">
          <div id="accordion">
-         <form method="POST" action="/updateFirstStatus"> 
+         <form method="POST" action="updateFirstStatus"> 
+         {{ csrf_field() }}
          @foreach ($studentdetails as $sd)
             <div class="card">
                <div class="card-header" id="headingOne">
@@ -46,10 +47,12 @@
                </div>
             </div>
             @endforeach
+
+            <button type="submit" class="btn btn-success pull-right">Success</button>
             </form>
          </div>
        
-         <button type="button" class="btn btn-success pull-right">Success</button>
+         
       </div>
    
 </html>
