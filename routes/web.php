@@ -64,3 +64,5 @@ Route::get('/primary_details', 'PrimaryDetailsRetrievalController@showDetails');
 Route::get('/makeRequest', 'GlobalsController@makeRequest');
 
 Route::get("/dummyMessage",'GlobalsController@sendSMS');
+
+Route::get("/dummyMail",'GlobalsController@sendMail');
