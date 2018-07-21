@@ -27,12 +27,7 @@
         </td>
         <td width="5%">
         <button type="button" class="btn btn-primary pull-right widget-title bg_lo" data-toggle="collapse" data-target="#collapseExample">+</button>
-        <span class="icon"> <i class="icon-chevron-down"></i> </span>
-        <div id="demo" class="collapse" class="col-md-12">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </div>   
+        
       </td>
       </tr>   
 
