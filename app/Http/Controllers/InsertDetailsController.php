@@ -73,6 +73,13 @@ class InsertDetailsController extends Controller
 
       $student->save();
 
+      return view('studentstatus');
+
 }
+
+public function updateFirstStatus(Request $request){
+
+}
+
 
 }
