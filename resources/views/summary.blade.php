@@ -36,23 +36,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 </style>
 <script type="text/javascript">
-  // Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById('myImg');
-var modalImg = document.getElementById("img01");
-img.onclick = function(){
-    modalImg.src = this.src;
-}
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-    modal.style.display = "none";
-}
+  
   var coll = document.getElementsByClassName("collapsible");
 var i;
 
@@ -74,7 +58,7 @@ for (i = 0; i < coll.length; i++) {
 
 <div class="container">
   <h2>Summary Page</h2>
-  
+
   <div class="panel-group" id="accordion">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -84,35 +68,35 @@ for (i = 0; i < coll.length; i++) {
       </div>
       <div id="collapse1" class="panel-collapse collapse">
         <div class="panel-body">
-          <table class="table table-bordered data-table">    
+          <table class="table table-bordered data-table">
     <tbody>
       <tr>
         <td width="50%" align="center">ID:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
       <tr>
         <td width="50%" align="center">First Name:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
       <tr>
         <td width="50%" align="center">Last Name:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
       <tr>
         <td width="50%" align="center">Email ID:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
 
       <tr>
@@ -120,42 +104,42 @@ for (i = 0; i < coll.length; i++) {
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
       <tr>
         <td width="50%" align="center">Landline:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
       <tr>
         <td width="50%" align="center">Age:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
       <tr>
         <td width="50%" align="center">DOB:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
       <tr>
         <td width="50%" align="center">gender:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
       <tr>
         <td width="50%" align="center">Class:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr>   
+      </tr>
 
 
       <tr>
@@ -163,156 +147,156 @@ for (i = 0; i < coll.length; i++) {
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr>   
-      
+      </tr>
+
 
       <tr>
         <td width="50%" align="center">Major:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr>   
-      
+      </tr>
+
       <tr>
         <td width="50%" align="center">Caste:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr>   
-      
+      </tr>
+
       <tr>
         <td width="50%" align="center">Current Address:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr>   
-      
+      </tr>
+
 
       <tr>
         <td width="50%" align="center">Pincode:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr>   
-      
+      </tr>
+
 
     <tr>
         <td width="50%" align="center">City:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr>   
-      
+      </tr>
+
 
       <tr>
         <td width="50%" align="center">State:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr>   
-      
+      </tr>
+
       <tr>
         <td width="50%" align="center">Father Name:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr>   
-      
+      </tr>
+
       <tr>
         <td width="50%" align="center">Father Contact:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr>   
-      
+      </tr>
+
       <tr>
         <td width="50%" align="center">Father EmailID:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr>   
+      </tr>
 
       <tr>
         <td width="50%" align="center">Father Qualification:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr>   
+      </tr>
 
       <tr>
         <td width="50%" align="center">Father Office Address:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr>   
+      </tr>
 
       <tr>
         <td width="50%" align="center">Mother Name:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr>   
+      </tr>
 
       <tr>
         <td width="50%" align="center">Mother Contact:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
       <tr>
         <td width="50%" align="center">Mother EmailID:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
       <tr>
         <td width="50%" align="center">Mother Qualification:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
       <tr>
         <td width="50%" align="center">Mother Office Address:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
       <tr>
         <td width="50%" align="center">Total Family Income:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
       <tr>
         <td width="50%" align="center">Total Family Members:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
       <tr>
         <td width="50%" align="center">Total Burden:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
       <tr>
         <td width="50%" align="center">Educon ID:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
     </tbody>
-    
+
   </table>
-  
+
 
 
         </div>
@@ -326,36 +310,36 @@ for (i = 0; i < coll.length; i++) {
       </div>
       <div id="collapse2" class="panel-collapse collapse">
         <div class="panel-body">
-          
- <table class="table table-bordered data-table">    
+
+ <table class="table table-bordered data-table">
     <tbody>
       <tr>
         <td width="50%" align="center">ID:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
       <tr>
         <td width="50%" align="center">User ID:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
       <tr>
         <td width="50%" align="center">tenth result:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
       <tr>
         <td width="50%" align="center">twelfth result:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
 
       <tr>
@@ -363,17 +347,17 @@ for (i = 0; i < coll.length; i++) {
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
       <tr>
         <td width="50%" align="center">Mother's Highest Qualification:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
     </tbody>
-    
+
   </table>
 
 
@@ -388,36 +372,36 @@ for (i = 0; i < coll.length; i++) {
       </div>
       <div id="collapse3" class="panel-collapse collapse">
         <div class="panel-body">
-          
-          <table class="table table-bordered data-table">    
+
+          <table class="table table-bordered data-table">
     <tbody>
       <tr>
         <td width="50%" align="center">ID:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
       <tr>
         <td width="50%" align="center">User ID:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
       <tr>
         <td width="50%" align="center">mother's Salary:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
       <tr>
         <td width="50%" align="center">father's Salary:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
 
       <tr>
@@ -425,17 +409,17 @@ for (i = 0; i < coll.length; i++) {
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
       <tr>
         <td width="50%" align="center">Mother's Profession:</td>
         <td width="30%" align="center">
           Ans daalo
         </td>
-      </tr> 
+      </tr>
 
     </tbody>
-    
+
   </table>
 
 
@@ -451,39 +435,11 @@ for (i = 0; i < coll.length; i++) {
       <div id="collapse4" class="panel-collapse collapse">
         <div class="panel-body">
 
-        <img id="myImg" src="download.jpg" style="width:100%;max-width:300px;border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;  !important;">
-
-<!-- The Modal -->
-<div id="myModal" class="modal" style="display: none; 
-    position: fixed; 
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); !important;">
-  <span class="close" style="position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s; !important;">&times;</span>
-  <img class="modal-cont" id="img01" style="margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px; !important;">
-</div>
-
+          <a href="javascript:showModal()"><img id="myImg" src="download.jpg" style="width:100%;  !important; height:auto !important;"></a>
 
 
     </div>
-  
+
     </div>
 </div>
     <br>
@@ -491,6 +447,3 @@ for (i = 0; i < coll.length; i++) {
 
 </body>
 </html>
-
-
-
