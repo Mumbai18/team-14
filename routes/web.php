@@ -39,6 +39,8 @@ Route::post('/uploadDocuments', [
     'uses' => 'FileUploadController@uploadFile'
   ]);
 
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -68,6 +70,8 @@ Route::get('/primary_details', 'PrimaryDetailsRetrievalController@showDetails');
 Route::get('/profile', 'ProfileController@showProfile');
 
 Route::get('/showsummary', 'PrimaryDetailsRetrievalController@showSummary');
+
+Route::get('/secondapproval', 'ProcessingController@secondApproval');
 
 Route::get('/primary_details', 'PrimaryDetailsRetrievalController@showDetails');
 

@@ -15,6 +15,7 @@ class CreateExecsTable extends Migration
     {
         Schema::create('execs', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->unique()->references('id')->on('user');
             $table->string('name');
             $table->string('emailId');
             $table->string('contact');
