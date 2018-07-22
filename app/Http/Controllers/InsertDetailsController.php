@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Student;
 use App\Donor;
+use App\Volunteer;
 use DB;
 
 class InsertDetailsController extends Controller
@@ -94,6 +95,8 @@ public function updateFirstStatus(Request $request){
                   
             }
       }
+
+      return view('index');
 
       //call message and mail controller
       

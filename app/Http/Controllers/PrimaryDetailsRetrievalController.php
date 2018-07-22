@@ -25,4 +25,13 @@ class PrimaryDetailsRetrievalController extends Controller
 
 
 	}    
+
+	public function showSummary(){
+		$execuser = Auth::user();
+		$studentsAssigned = Student::where('execAssigned','=','$execuser->id')->get();
+		foreach($studentsAssigned as $s){
+			
+		}
+		return view('summary')-with('studentsAssigned',$studentsAssigned);
+	}
 }
