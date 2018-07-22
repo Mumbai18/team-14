@@ -1,108 +1,4 @@
 <!DOCTYPE html>
-<?php
-
-$con =mysqli_connect("localhost","root","qweasdzxc","egnitia_localhost") or die(mysqli_error($con));
-//$con =mysqli_connect("localhost","egnitiaa_vishal","qweasdzxc","egnitiaa_EgnitiaAdmissions"); 
-
- session_start();
-        $_SESSION["logged_in"] = true; 
-    
-    $User_id= $_SESSION["User_id"];
-
-    #fetching details from database
-
-    $result1 = mysqli_query($con,"SELECT * FROM User WHERE User_id = '".$User_id."'");
-    $row1=mysqli_fetch_assoc($result1);
-    $user_type=$row1['User_type'];
-
-    
-   //echo '<img src="data:image/jpeg;base64,'.base64_encode( $row1['User_Picture'] ).'"/>';
-
-
-
-   
-
-    if($user_type==0){
-        $result = mysqli_query($con,"SELECT * FROM Student WHERE User_id = '".$User_id."'");
-   
-        $row=mysqli_fetch_assoc($result);
-    
-
-        $pwd=$row1['User_Password'];
-        $fname=$row['First_name'];
-        $lname=$row['Last_name'];
-        $mname=$row['Middile_name'];
-        $flname=$row['Former_Last_Name'];
-        $dob=$row['DOB'];
-        $country=$row['Nationality'];
-        $gender=$row['Gender'];
-        if($gender=='M'){
-            $gender="Male";}
-        if($gender=='F'){
-            $gender="Female";}   
-        if($gender=='O'){
-            $gender="Other";}        
-        $c_address=$row['Current_Address'];
-        $p_address=$row['P_Address'];
-        $email=$row['Email'];
-        $phone_no=$row['Phone_no'];
-        $image=$row1['User_Picture'];
-    }
-
-        else if($user_type==1){
-            $result = mysqli_query($con,"SELECT * FROM agent WHERE Agent_id = '".$User_id."'");
-   
-            $row=mysqli_fetch_assoc($result);
-        
-            $pwd=$row1['User_Password'];
-            $fname=$row['First_Name'];
-            $lname=$row['Last_Name'];
-            $mname=$row['Middle_Name'];
-            $flname=$row['Former_Last_Name'];
-            $dob=$row['DOB'];
-            $country=$row['Nationality'];
-            $gender=$row['Gender'];
-            if($gender=='M'){
-                $gender="Male";}
-            if($gender=='F'){
-                $gender="Female";}   
-            if($gender=='O'){
-                $gender="Other";}        
-            $c_address=$row['Current_Address'];
-            $p_address=$row['P_Address'];
-            $email=$row['Email'];
-            $phone_no=$row['Phone_no'];
-            $image=$row1['User_Picture'];
-            
-        }
-        else{
-            $result = mysqli_query($con,"SELECT * FROM marketer WHERE Marketer_id = '".$User_id."'");
-   
-        $row=mysqli_fetch_assoc($result);
-    
-        $pwd=$row1['User_Password'];
-        $fname=$row['First_name'];
-        $lname=$row['Last_name'];
-        $mname=$row['Middle_name'];
-        $flname=$row['Former_Last_Name'];
-        $dob=$row['DOB'];
-        $country=$row['Nationality'];
-        $gender=$row['Gender'];
-        if($gender=='M'){
-            $gender="Male";}
-        if($gender=='F'){
-            $gender="Female";}   
-        if($gender=='O'){
-            $gender="Other";}        
-        $c_address=$row['Current_Address'];
-        $p_address=$row['P_Address'];
-        $email=$row['Email'];
-        $phone_no=$row['Phone_no'];
-        $image=$row1['User_Picture'];
-        }
-
-        
-?>
 <html >
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -123,10 +19,10 @@ $con =mysqli_connect("localhost","root","qweasdzxc","egnitia_localhost") or die(
     <link href="assets/css/bootstrap-formhelpers-currencies.flags.css" rel="stylesheet">
     <link href="assets/css/docs.css" rel="stylesheet">
     <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
-  
+
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Edit Profile</title>
@@ -135,16 +31,16 @@ $con =mysqli_connect("localhost","root","qweasdzxc","egnitia_localhost") or die(
   <meta name="google" value="notranslate">
   <link rel="shortcut icon" href="/images/cp_ico.png">
 
-  
+
   <!--stylesheets / link tags loaded here-->
 
 
 
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
-  
 
-  
+
+
 
   <style type="text/css">@import url("//bootswatch.com/sandstone/bootstrap.min.css");
 
@@ -270,50 +166,17 @@ $con =mysqli_connect("localhost","root","qweasdzxc","egnitia_localhost") or die(
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
-    <div class="navbar-header">      
-    <div style="float:right";>           
-      
+    <div class="navbar-header">
+    <div style="float:right";>
+
       </div>
-    </div> 
+    </div>
 
 
     <div class="nav navbar-nav navbar" id="myNavbar">
     <div class="nav navbar-nav navbar">
 
     <!-- Side bar starts-->
-    
-    <?php
-    if($user_type==0){
-        
-        echo '<div id="mySidenav" class="sidenav">';
-        echo '<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>';
-        echo '<a href="Upload_documents.php">Upload Documents</a>';
-        echo '<a href="University_search.php">Apply Now</a>';
-        echo '<a href="application_status.php">Application Status</a>';
-        echo '<a href="profile.php">Your Profile</a>';
-        echo '</div>';
-    }
-        else if($user_type==1){
-            echo '<div id="mySidenav" class="sidenav">';
-            echo '<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>';
-            echo '<a href="pending_request.php">Pending Request</a>';
-            echo '<a href="completed_applications.php">Completed Applications</a>';
-            echo '<a href="pending_applications.php">Pending Applications</a>';
-            echo '<a href="all_applications.php">All Applications</a>';
-            echo '<a href="profile.php">Your Profile</a>';
-            echo '</div>';
-        }
-        else{
-            echo '<div id="mySidenav" class="sidenav">';
-            echo '<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>';
-            echo '<a href="Upload_documents.php">Pending Request</a>';
-            echo '<a href="University_search.php">Apply Now</a>';
-            echo '<a href="application_status.php">Application Status</a>';
-            echo '<a href="profile.php">Your Profile</a>';
-            echo '</div>';
-            
-        } 
-        ?>
 
 
 <span style="font-size:30px;cursor:pointer;color:white;" onclick="openNav()">&#9776;</span>
@@ -330,67 +193,57 @@ function closeNav() {
 
 <!-- side bar ends-->
 </div>
-    <a class="navbar-brand" href="#" style="padding-left:50px;color:white;">Egnitia Admissions</a>
+    <a class="navbar-brand" href="#" style="padding-left:50px;color:white;">Educon</a>
     </div>
-    
+
       <ul class="nav navbar-nav navbar-right">
 
         <li class="active"><a href="#">Home</a></li>
         <li><a href="#" class="blue">Services</a></li>
-        <li><a href="#" class="blue">About Us </a></li>  
-        <li><a href="profile.php" class="blue"><span class="glyphicon glyphicon-user"></span><?php echo " ", $fname?></a></li>
+        <li><a href="#" class="blue">About Us </a></li>
+        <li><a href="profile.php" class="blue"><span class="glyphicon glyphicon-user"></span>Profile
         <li><a href="logout.php" class="blue"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
       </ul>
     </div>
-  </div>  
+  </div>
 </nav>
 <!-- Nav Bar Ends-->
 
-  
-  
+
+
   <div class="container">
     <h1 style="color:blue;">Edit Profile</h1>
   	<hr>
-	  
+
       <!-- edit form column -->
       <div class="col-md-9 personal-info">
         <!--<div class="alert alert-info alert-dismissable">
-          <a class="panel-close close" data-dismiss="alert">×</a> 
+          <a class="panel-close close" data-dismiss="alert">×</a>
           <i class="fa fa-coffee"></i>
           This is an <strong>.alert</strong>. Use this to show important messages to the user.
         </div>-->
 
         <h3>Educational info</h3>
-        
+
         <form action="edit_profile_backend.php" method="POST" class="form-horizontal" role="form" enctype="multipart/form-data">
 
+        {{ csrf_field() }}
+        @foreach ($studentdetails as $sd)
 
-        <div class="row">
-      <!-- left column -->
-      <div class="col-md-3">
-        <div class="text-center">
-          <?php echo '<img style="width:250px; height:200px;" class="img-rounded img-responsive" src="data:image/jpeg;base64,'.base64_encode( $row1['User_Picture'] ).'"/>';?>    
-          <h6>Upload a different photo...</h6>
-          <!--<form name="form" action="edit_profile_backend.php" method="POST" >-->
+
           
-          <div class="col-md-12">
-          <input type="file" class="form-control"  name="picture" class="col-md-8" style="float:left; padding:5px;/">
-          <br><br>
-          
-          </div>
-          <!--</form>-->
         </div>
       </div>
-    
-            
+
+
         <div style="float:right;" class="col-md-9">
         <div class="form-horizontal">
             <label for="fieldcurrently" class="col-lg-4 control-label">Field Currently</label>
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-            <input type="text" class="form-control" id="FieldCurrently" name="FieldCurrently" placeholder="Field Currently" 
-            value="<?php echo $fieldCurrently ?>">
-        </div> 
+            <input type="text" class="form-control" id="FieldCurrently" name="FieldCurrently" placeholder="Field Currently"
+            value="{{ $sd->FieldCurrently }}">
+        </div>
         <br>
 
         <div class="form-horizontal">
@@ -398,8 +251,8 @@ function closeNav() {
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
             <input type="text" class="form-control" id="Year1Aggregate" name="Year1Aggregate" placeholder="Year1Aggregate"
-            value="<?php echo $year1Aggregate ?>">
-        </div> 
+            value="{{ $sd->Year1Aggregate }}">
+        </div>
         <br>
 
 
@@ -408,18 +261,18 @@ function closeNav() {
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
             <input type="text" class="form-control" id="Year2Aggregate" name="Year2Aggregate" placeholder="Year2Aggregate"
-            value="<?php echo $year2Aggregate ?>">
-        </div> 
+            value="{{ $sd->Year2Aggregate }}">
+        </div>
         <br>
 
-        
+
         <div class="form-horizontal">
             <label for="year3aggregate" class="col-lg-4 control-label">Year 3 aggregate</label>
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
             <input type="text" class="form-control" id="Year3Aggregate" name="Year3Aggregate" placeholder="Year3Aggregate"
-            value="<?php echo $year3Aggregate ?>">
-        </div> 
+            value="{{ $sd->year3aggregate }}">
+        </div>
         <br>
 
 
@@ -428,8 +281,8 @@ function closeNav() {
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
             <input type="text" class="form-control" id="TenthAggregate" name="TenthAggregate" placeholder="TenthAggregate"
-            value="<?php echo $tenthAggregate ?>">
-        </div> 
+            value="{{ $sd->TenthAggregate }}"
+        </div>
         <br>
 
         <div class="form-horizontal">
@@ -437,8 +290,8 @@ function closeNav() {
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
             <input type="text" class="form-control" id="TwelfthAggregate" name="TwelfthAggregate" placeholder="TwelfthAggregate"
-            value="<?php echo $twelfthAggregate ?>">
-            
+            value="{{ $sd->TwelfthAggregate }}">
+
              </div>
 </div>
 
@@ -448,7 +301,7 @@ function closeNav() {
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
             <input type="text" class="form-control" id="undergrad" name="undergrad" placeholder="undergrad"
-            value="<?php echo $undergrad ?>">
+            value="{{ $sd->undergrad }}">
             </div>
         </div>
         <br>
@@ -458,8 +311,8 @@ function closeNav() {
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
             <input type="text" class="form-control" id="postgrad" name="postgrad" placeholder="postgrad"
-            value="<?php echo $postgrad ?>">
-        </div> 
+            value="{{ $sd->postgrad }}">
+        </div>
         <br>
         </form>
       </div>
@@ -467,7 +320,7 @@ function closeNav() {
 </div>
 </div>
 <hr>
-  
+
   <script>
     // sandbox disable popups
     if (window.self !== window.top && window.name!="view1") {;
@@ -476,7 +329,7 @@ function closeNav() {
       window.prompt = function(){/*disable prompt*/};
       window.open = function(){/*disable open*/};
     }
-    
+
     // prevent href=# click jump
     document.addEventListener("DOMContentLoaded", function() {
       var links = document.getElementsByTagName("A");
@@ -504,12 +357,12 @@ function closeNav() {
       }
     }, false);
   </script>
-  
+
   <!--scripts loaded here-->
-  
+
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
+
   <div style="float: left;">
 <div id="google_translate_element"></div>
 <script type="text/javascript">
@@ -517,7 +370,7 @@ function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
 }
 </script>
- 
+
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </div>
 

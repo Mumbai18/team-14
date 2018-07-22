@@ -18,11 +18,25 @@ class Education extends Migration
             $table->increments('id');
             $table->integer('user_id')->unique()->references('id')->on('users');
             //$table->integer('user_id')->references('id')->on('users');
-            $table->integer('ssc')->nullable();
-            $table->integer('hsc')->nullable();
-            $table->string('dadHighestQualification');
-            $table->string('momHighestQualification');
             $table->timestamps();
+            $table->string('owner');
+            $table->string('type');
+            $table->string('pension');
+            $table->string('mincome');
+            $table->string('fincome');
+            $table->string('sincome');
+            $table->string('grant');
+            $table->string('tieup');
+            $table->string('board');
+            $table->string('school');
+            $table->string('marks');
+            $table->string('bboard');
+            $table->string('sschool');
+            $table->string('bbboard');
+            $table->string('ssschool');
+            $table->string('mmmarks');
+            $table->string('sports');
+
         });
     }
 

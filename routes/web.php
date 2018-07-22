@@ -80,3 +80,7 @@ Route::get("/dummyMail",'GlobalsController@sendMail');
 Route::get("/chatroom",'ChatController@chat');
 
 Route::get("/chatrooms",'ChatsController@chats');
+
+Route::get("/educationalDetails",'EducationalDetailsController@display');
+
+Route::get("/dashboard",'DashboardController@display');
