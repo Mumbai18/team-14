@@ -16,7 +16,7 @@
   }
   </style>
       <style type="text/css">
-      	html, body, #container {
+        html, body, #container {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -54,6 +54,10 @@
     </script>
   </head>
   <body>
+
+  <div style="width: 75%">
+    <canvas id="canvas"></canvas>
+  </div>
     <div align="center" id="container" style="width: 30%; height: 30%"></div>
 
     <br>
@@ -213,6 +217,87 @@ function drawBasic() {
             display: true,
             text: 'Scatter Chart (values in 100s)'
           },
+        }
+      });
+    };
+
+    var barChartData = {
+      labels: ['5', '10', '15', '20', '25', '30', '35'],
+      datasets: [{
+        label: 'Finance',
+        backgroundColor: window.chartColors.red,
+        data: [
+          2,
+          3,
+          1,
+          6,
+          8,
+          3,
+          1
+        ]
+      }, {
+        label: 'Academic',
+        backgroundColor: window.chartColors.blue,
+        data: [
+          2,
+          5,
+          1,
+          6,
+          0,
+          3,
+          1
+        ]
+      }, {
+        label: 'Extra curricular',
+        backgroundColor: window.chartColors.green,
+        data: [
+         2,
+          3,
+          2,
+          6,
+          3,
+          6,
+          1
+        ]
+      },
+      {
+        label: 'Caste',
+        backgroundColor: window.chartColors.yellow,
+        data: [
+          2,
+          5,
+          1,
+          6,
+          4,
+          3,
+          1
+        ]
+      }]
+
+    };
+    window.onload = function() {
+      var ctx = document.getElementById('canvas').getContext('2d');
+      window.myBar = new Chart(ctx, {
+        type: 'bar',
+        data: barChartData,
+        options: {
+          title: {
+            display: true,
+            text: 'Funds raised by donor types'
+          },
+          tooltips: {
+            mode: 'index',
+            intersect: false
+          },
+          responsive: true,
+          scales: {
+            xAxes: [{
+              stacked: true,
+            }],
+            yAxes: [{
+              stacked: true
+            }]
+          }
         }
       });
     };
