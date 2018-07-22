@@ -1,108 +1,4 @@
 <!DOCTYPE html>
-<?php
-
-$con =mysqli_connect("localhost","root","qweasdzxc","egnitia_localhost") or die(mysqli_error($con));
-//$con =mysqli_connect("localhost","egnitiaa_vishal","qweasdzxc","egnitiaa_EgnitiaAdmissions"); 
-
- session_start();
-        $_SESSION["logged_in"] = true; 
-    
-    $User_id= $_SESSION["User_id"];
-
-    #fetching details from database
-
-    $result1 = mysqli_query($con,"SELECT * FROM User WHERE User_id = '".$User_id."'");
-    $row1=mysqli_fetch_assoc($result1);
-    $user_type=$row1['User_type'];
-
-    
-   //echo '<img src="data:image/jpeg;base64,'.base64_encode( $row1['User_Picture'] ).'"/>';
-
-
-
-   
-
-    if($user_type==0){
-        $result = mysqli_query($con,"SELECT * FROM Student WHERE User_id = '".$User_id."'");
-   
-        $row=mysqli_fetch_assoc($result);
-    
-
-        $pwd=$row1['User_Password'];
-        $fname=$row['First_name'];
-        $lname=$row['Last_name'];
-        $mname=$row['Middile_name'];
-        $flname=$row['Former_Last_Name'];
-        $dob=$row['DOB'];
-        $country=$row['Nationality'];
-        $gender=$row['Gender'];
-        if($gender=='M'){
-            $gender="Male";}
-        if($gender=='F'){
-            $gender="Female";}   
-        if($gender=='O'){
-            $gender="Other";}        
-        $c_address=$row['Current_Address'];
-        $p_address=$row['P_Address'];
-        $email=$row['Email'];
-        $phone_no=$row['Phone_no'];
-        $image=$row1['User_Picture'];
-    }
-
-        else if($user_type==1){
-            $result = mysqli_query($con,"SELECT * FROM agent WHERE Agent_id = '".$User_id."'");
-   
-            $row=mysqli_fetch_assoc($result);
-        
-            $pwd=$row1['User_Password'];
-            $fname=$row['First_Name'];
-            $lname=$row['Last_Name'];
-            $mname=$row['Middle_Name'];
-            $flname=$row['Former_Last_Name'];
-            $dob=$row['DOB'];
-            $country=$row['Nationality'];
-            $gender=$row['Gender'];
-            if($gender=='M'){
-                $gender="Male";}
-            if($gender=='F'){
-                $gender="Female";}   
-            if($gender=='O'){
-                $gender="Other";}        
-            $c_address=$row['Current_Address'];
-            $p_address=$row['P_Address'];
-            $email=$row['Email'];
-            $phone_no=$row['Phone_no'];
-            $image=$row1['User_Picture'];
-            
-        }
-        else{
-            $result = mysqli_query($con,"SELECT * FROM marketer WHERE Marketer_id = '".$User_id."'");
-   
-        $row=mysqli_fetch_assoc($result);
-    
-        $pwd=$row1['User_Password'];
-        $fname=$row['First_name'];
-        $lname=$row['Last_name'];
-        $mname=$row['Middle_name'];
-        $flname=$row['Former_Last_Name'];
-        $dob=$row['DOB'];
-        $country=$row['Nationality'];
-        $gender=$row['Gender'];
-        if($gender=='M'){
-            $gender="Male";}
-        if($gender=='F'){
-            $gender="Female";}   
-        if($gender=='O'){
-            $gender="Other";}        
-        $c_address=$row['Current_Address'];
-        $p_address=$row['P_Address'];
-        $email=$row['Email'];
-        $phone_no=$row['Phone_no'];
-        $image=$row1['User_Picture'];
-        }
-
-        
-?>
 <html >
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -330,7 +226,7 @@ function closeNav() {
 
 <!-- side bar ends-->
 </div>
-    <a class="navbar-brand" href="#" style="padding-left:50px;color:white;">Egnitia Admissions</a>
+    <a class="navbar-brand" href="#" style="padding-left:50px;color:white;">Educon</a>
     </div>
     
       <ul class="nav navbar-nav navbar-right">
@@ -338,7 +234,7 @@ function closeNav() {
         <li class="active"><a href="#">Home</a></li>
         <li><a href="#" class="blue">Services</a></li>
         <li><a href="#" class="blue">About Us </a></li>  
-        <li><a href="profile.php" class="blue"><span class="glyphicon glyphicon-user"></span><?php echo " ", $fname?></a></li>
+        <li><a href="profile.php" class="blue"><span class="glyphicon glyphicon-user"></span>Profile
         <li><a href="logout.php" class="blue"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
       </ul>
     </div>
@@ -364,20 +260,11 @@ function closeNav() {
         
         <form action="edit_profile_backend.php" method="POST" class="form-horizontal" role="form" enctype="multipart/form-data">
 
-
-        <div class="row">
-      <!-- left column -->
-      <div class="col-md-3">
-        <div class="text-center">
-          <?php echo '<img style="width:250px; height:200px;" class="img-rounded img-responsive" src="data:image/jpeg;base64,'.base64_encode( $row1['User_Picture'] ).'"/>';?>    
-          <h6>Upload a different photo...</h6>
-          <!--<form name="form" action="edit_profile_backend.php" method="POST" >-->
+        {{ csrf_field() }}
+        @foreach ($studentdetails as $sd)
+         
           
-          <div class="col-md-12">
-          <input type="file" class="form-control"  name="picture" class="col-md-8" style="float:left; padding:5px;/">
-          <br><br>
           
-          </div>
           <!--</form>-->
         </div>
       </div>
@@ -389,7 +276,7 @@ function closeNav() {
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
             <input type="text" class="form-control" id="FieldCurrently" name="FieldCurrently" placeholder="Field Currently" 
-            value="<?php echo $fieldCurrently ?>">
+            value="{{ $sd->FieldCurrently }}">
         </div> 
         <br>
 
@@ -398,7 +285,7 @@ function closeNav() {
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
             <input type="text" class="form-control" id="Year1Aggregate" name="Year1Aggregate" placeholder="Year1Aggregate"
-            value="<?php echo $year1Aggregate ?>">
+            value="{{ $sd->Year1Aggregate }}">
         </div> 
         <br>
 
@@ -408,7 +295,7 @@ function closeNav() {
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
             <input type="text" class="form-control" id="Year2Aggregate" name="Year2Aggregate" placeholder="Year2Aggregate"
-            value="<?php echo $year2Aggregate ?>">
+            value="{{ $sd->Year2Aggregate }}">
         </div> 
         <br>
 
@@ -418,7 +305,7 @@ function closeNav() {
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
             <input type="text" class="form-control" id="Year3Aggregate" name="Year3Aggregate" placeholder="Year3Aggregate"
-            value="<?php echo $year3Aggregate ?>">
+            value="{{ $sd->year3aggregate }}">
         </div> 
         <br>
 
@@ -428,7 +315,7 @@ function closeNav() {
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
             <input type="text" class="form-control" id="TenthAggregate" name="TenthAggregate" placeholder="TenthAggregate"
-            value="<?php echo $tenthAggregate ?>">
+            value="{{ $sd->TenthAggregate }}"
         </div> 
         <br>
 
@@ -437,7 +324,7 @@ function closeNav() {
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
             <input type="text" class="form-control" id="TwelfthAggregate" name="TwelfthAggregate" placeholder="TwelfthAggregate"
-            value="<?php echo $twelfthAggregate ?>">
+            value="{{ $sd->TwelfthAggregate }}">
             
              </div>
 </div>
@@ -448,7 +335,7 @@ function closeNav() {
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
             <input type="text" class="form-control" id="undergrad" name="undergrad" placeholder="undergrad"
-            value="<?php echo $undergrad ?>">
+            value="{{ $sd->undergrad }}">
             </div>
         </div>
         <br>
@@ -458,7 +345,7 @@ function closeNav() {
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
             <input type="text" class="form-control" id="postgrad" name="postgrad" placeholder="postgrad"
-            value="<?php echo $postgrad ?>">
+            value="{{ $sd->postgrad }}">
         </div> 
         <br>
         </form>
