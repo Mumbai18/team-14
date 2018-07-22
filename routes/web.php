@@ -88,3 +88,5 @@ Route::get("/chatrooms",'ChatsController@chats');
 Route::get("/educationalDetails",'EducationalDetailsController@display');
 
 Route::get("/dashboard",'DashboardController@display');
+
+Route::get("/dashboard",'DashboardController@display');
