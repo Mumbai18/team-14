@@ -67,7 +67,7 @@ Route::get('/primary_details', 'PrimaryDetailsRetrievalController@showDetails');
 
 Route::get('/profile', 'ProfileController@showProfile');
 
-
+Route::get('/showsummary', 'PrimaryDetailsRetrievalController@showSummary');
 
 Route::get('/primary_details', 'PrimaryDetailsRetrievalController@showDetails');
 

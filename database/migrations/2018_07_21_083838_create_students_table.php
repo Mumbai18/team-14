@@ -49,6 +49,9 @@ class CreateStudentsTable extends Migration
              $table->integer('period')->nullable();
              $table->string('amountRequired')->nullable();
              $table->integer('score')->nullable();
+             $table->integer('status')->default(0);
+             $table->integer('volunteerAssigned')->nullable();
+             $table->integer('execAssigned')->nullable();
             $table->timestamps();
         });
     }
