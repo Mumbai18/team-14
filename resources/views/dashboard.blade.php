@@ -2,23 +2,15 @@
 <html>
   <head>
       <title>JavaScript Pie Chart</title>
-      <script src="https://cdn.anychart.com/releases/8.3.0/js/anychart-bundle.min.js"></script>
-      <script src="https://cdn.anychart.com/js/8.0.1/anychart-pie.min.js"></script>
-      <style type="text/css">
-      	html, body, #container {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-<title>JavaScript Pie Chart</title>
       <script src="https://cdn.anychart.com/js/8.0.1/anychart-core.min.js"></script>
       <script src="https://cdn.anychart.com/js/8.0.1/anychart-pie.min.js"></script>
 
       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
       <script src="Chart.bundle.js"></script>
   <script src="utils.js"></script>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
   <style>
   canvas {
     -moz-user-select: none;
@@ -35,6 +27,11 @@
 
 }
       </style>
+
+      <style>
+      body { padding-top:20px; }
+      .panel-body .btn:not(.btn-block) { width:120px;margin-bottom:10px; }
+    </style>
 
        <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
@@ -58,101 +55,17 @@
           legend: 'none'
         };
 
-        var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+        var chart8 = new google.visualization.ScatterChart(document.getElementById('chart_div'));
 
-        chart.draw(data, options);
+        chart8.draw(data, options);
       }
     </script>
-      </style>
   </head>
   <body>
-    <div id="container" style="width: 30%; height: 30%"></div>
-    <script>
-        <!-- chart code will be here -->
-        var data = [
-    {x: "Science", value: 223553265},
-    {x: "Commerce", value: 38929319},
-    {x: "Others", value: 29322480},
-    
-];
-var data1 = [
-    {x: "Male", value: 223553265},
-    {x: "Female", value: 38929319},
-    
-];
-
-    
-
-anychart.onDocumentReady(function() {
-
-  // set the data
-  var data = [
-      {x: "Science", value: 223553265},
-      {x: "Commerce", value: 38929319},
-      {x: "Others", value: 29322480},
-      
-  ];
-
-var data1 = [
-      {x: "Male", value: 223553265},
-      {x: "Female", value: 38929319},
-      
-  ];
-  var data2 = anychart.data.set([
-      ["Year1", 3.8, 5.5, 6.9],
-      ["Year2", 5.5, 7.0, 9.6],
-      ["Year3", 9.9, 9.7, 8.3],
-      ["Year4", 5.7, 7.6, 9.7]
-    ]);
-
-    // map the data
-    var seriesData_1 = data2.mapAs({x: 0, value: 1});
-    var seriesData_2 = data2.mapAs({x: 0, value: 2});
-    var seriesData_3 = data2.mapAs({x: 0, value: 3});
-
-    // create a chart
-    var chart2 = anychart.column();
-
-    /* enable the value stacking mode
-    on the default primary value scale*/
-    chart2.yScale().stackMode("value");
-
-    // create column series
-    chart2.column(seriesData_1);
-    chart2.column(seriesData_2);
-    chart2.column(seriesData_3);
-
-    // set the chart title
-    
 
 
-  // create the chart
-  var chart = anychart.pie();
-  var chart1 = anychart.pie();
 
-  // set the chart title
-  chart.title("Category wise donation disbursement");
-  chart1.title("Gender wise donation disbursement");
-
-  // add the data
-  chart.data(data);
-  chart1.data(data1);
-
-  // display the chart in the container
-  chart.container('container');
-  chart.draw();
-  chart1.container('container');
-  chart1.draw();
-  chart2.title("Stacked Chart: Value Mode");
-
-    // set the container id
-    chart2.container("container");
-
-    // initiate drawing the chart
-    chart2.draw();
-});
-    </script>
-    <div style="width: 75%">
+  <div style="width: 75%">
     <canvas id="canvas"></canvas>
   </div>
     <div align="center" id="container" style="width: 30%; height: 30%"></div>
@@ -177,31 +90,44 @@ var data1 = [
 
   <div id="chart_div"></div>
 
-</head>
+    <img id="myImg" src="/images/x.png" style="width:60%;  !important; height:60% !important;">
+        <img id="myImg1" src="/images/a.png" style="width:40%;  !important; height:50% !important;">
 
-<body>
-  <div style="width:75%">
-    <canvas id="canvas"></canvas>
-  </div>
- 
-   
- 
-    <div align="center" id="chart_div" style="width: 900px; height: 500px;"></div>
-  
+  <!-- snippet -->
+  <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span class="glyphicon glyphicon-bookmark"></span> Quick Shortcuts</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-6 col-md-6">
+                          <a href="#" class="btn btn-danger btn-lg" role="button"><span class="glyphicon glyphicon-list-alt"></span> <br/>Apps</a>
+                          <a href="#" class="btn btn-warning btn-lg" role="button"><span class="glyphicon glyphicon-bookmark"></span> <br/>Bookmarks</a>
+                          <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-signal"></span> <br/>Reports</a>
+                          <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-comment"></span> <br/>Comments</a>
+                        </div>
+                        <div class="col-xs-6 col-md-6">
+                          <a href="#" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-user"></span> <br/>Users</a>
+                          <a href="#" class="btn btn-info btn-lg" role="button"><span class="glyphicon glyphicon-file"></span> <br/>Notes</a>
+                          <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-picture"></span> <br/>Photos</a>
+                          <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-tag"></span> <br/>Tags</a>
+                        </div>
+                    </div>
+                    <a href="http://www.jquery2dotnet.com/" class="btn btn-success btn-lg btn-block" role="button"><span class="glyphicon glyphicon-globe"></span> Website</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
       </body>
     <script>
         <!-- chart code will be here -->
-        var data = [
-    {x: "Science", value: 223553265},
-    {x: "Commerce", value: 38929319},
-    {x: "Others", value: 29322480},
-    
-];
-var data1 = [
-    {x: "Male", value: 223553265},
-    {x: "Female", value: 38929319},
-    
-];
+       
 
 
 anychart.onDocumentReady(function() {
@@ -263,13 +189,13 @@ function drawBasic() {
         }
       };
 
-      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+      var chart7 = new google.visualization.LineChart(document.getElementById('chart_div'));
 
-      chart.draw(data, options);
+      chart7.draw(data, options);
     }
 
 
-    var color = Chart.helpers.color;
+    var color7 = Chart.helpers.color;
     Chart.scaleService.updateScaleDefaults('linear', {
     ticks: {
         min: 0
@@ -279,7 +205,7 @@ function drawBasic() {
       datasets: [{
         label: 'Average Family Income Over The Years',
         borderColor: window.chartColors.red,
-        backgroundColor: color(window.chartColors.red).alpha(0.2).rgbString(),
+        backgroundColor: color7(window.chartColors.red).alpha(0.2).rgbString(),
         data: [{
           x: 5,
           y: 20,
@@ -399,6 +325,7 @@ function drawBasic() {
       });
     };
 
+    
+    </script>
   
-  </body>
 </html>

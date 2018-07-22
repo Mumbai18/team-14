@@ -1,15 +1,15 @@
 <?php
 
-// $con =mysqli_connect("localhost","root","qweasdzxc","egnitia_localhost") or die(mysqli_error($con));
-    //$con =mysqli_connect("localhost","egnitiaa_vishal","qweasdzxc","egnitiaa_EgnitiaAdmissions");
+$con =mysqli_connect("localhost","root","qweasdzxc","egnitia_localhost") or die(mysqli_error($con));
+    //$con =mysqli_connect("localhost","egnitiaa_vishal","qweasdzxc","egnitiaa_EgnitiaAdmissions"); 
 
-
-
+   
+   
     /*session_start();
-        $_SESSION["logged_in"] = true;
-
+        $_SESSION["logged_in"] = true; 
+    
 	$User_id= $_SESSION["User_id"];
-
+	
 	$abc = "SELECT * from user where User_id = $User_id";
                     $pqr = mysqli_query($con, $abc);
                     $xyz = mysqli_fetch_assoc($pqr);
@@ -18,7 +18,7 @@
 	$pqr = mysqli_query($con, $abc);
     $xyz = mysqli_fetch_assoc($pqr);
     $usertype = $xyz['User_type'];
-
+    
 
     if($usertype==0){
     $qwes = "SELECT * from student where User_id = $User_id";
@@ -42,7 +42,7 @@
     $uio = mysqli_fetch_assoc($rty);
     $fname = $uio['First_name'];
     }
-
+    
     $email = $xyz['User_Email'];*/
 
 set_time_limit(0);
@@ -76,18 +76,18 @@ class Chat implements MessageComponentInterface {
         echo sprintf('Connection %d sending message "%s" to %d other connection%s' . "\n"
             , $from->resourceId, $msg, $numRecv, $numRecv == 1 ? '' : 's');
 
-
+		
 		$data = json_decode($msg, true);
 		$data['from'] = $fname;
 		$data['msg'] = $data['msg'];
 		$data['dt'] = date("d-m-Y h:i:s");
 
         foreach ($this->clients as $client) {
-
+            
                 // The sender is not the receiver, send to each client connected
 				$client->send(json_encode($data));
-
-
+	
+            
         }
     }
 
