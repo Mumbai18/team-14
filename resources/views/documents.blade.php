@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @extends('layouts.app')
 
 @section('content')
@@ -6,23 +5,9 @@
 <h2>Upload Personal details</h2>
     <div class="container" style="width:100%;">  
         <form method="post" action="uploadDocuments" enctype="multipart/form-data"> 
+        {{ csrf_field() }}
         <h3>Aadhar Card</h3>  
-=======
-<?php
-	include(nav_side.blade.php);
- ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Personal Details</title>
-</head>
-<body>
 
-<h2>Upload Personal details</h2>
-    <div class="container" style="width:100%;">
-        <form method="post" action="" enctype="multipart/form-data">
-        <h3>Aadhar Card</h3>
->>>>>>> 173f73578f9b7fcf224cba5ab0d0e17a5413fe60
         <br/>
         <div class="col-md-12">
 
@@ -157,12 +142,18 @@
         <input type="submit" class="btn btn-primary" value="Save Changes">
         </form>
      </div>
+     <div style="float: left;">
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+ 
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</div>
 
 
-<<<<<<< HEAD
+
 @endsection
-=======
 
- </body>
-</html>
->>>>>>> 173f73578f9b7fcf224cba5ab0d0e17a5413fe60
