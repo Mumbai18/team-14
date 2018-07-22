@@ -19,10 +19,10 @@
     <link href="assets/css/bootstrap-formhelpers-currencies.flags.css" rel="stylesheet">
     <link href="assets/css/docs.css" rel="stylesheet">
     <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
-  
+
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Edit Profile</title>
@@ -31,16 +31,16 @@
   <meta name="google" value="notranslate">
   <link rel="shortcut icon" href="/images/cp_ico.png">
 
-  
+
   <!--stylesheets / link tags loaded here-->
 
 
 
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
-  
 
-  
+
+
 
   <style type="text/css">@import url("//bootswatch.com/sandstone/bootstrap.min.css");
 
@@ -166,19 +166,19 @@
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
-    <div class="navbar-header">      
-    <div style="float:right";>           
-      
+    <div class="navbar-header">
+    <div style="float:right";>
+
       </div>
-    </div> 
+    </div>
 
 
     <div class="nav navbar-nav navbar" id="myNavbar">
     <div class="nav navbar-nav navbar">
 
     <!-- Side bar starts-->
-    
-    
+
+
 <span style="font-size:30px;cursor:pointer;color:white;" onclick="openNav()">&#9776;</span>
 
 <script>
@@ -195,56 +195,55 @@ function closeNav() {
 </div>
     <a class="navbar-brand" href="#" style="padding-left:50px;color:white;">Educon</a>
     </div>
-    
+
       <ul class="nav navbar-nav navbar-right">
 
         <li class="active"><a href="#">Home</a></li>
         <li><a href="#" class="blue">Services</a></li>
-        <li><a href="#" class="blue">About Us </a></li>  
+        <li><a href="#" class="blue">About Us </a></li>
         <li><a href="profile.php" class="blue"><span class="glyphicon glyphicon-user"></span>Profile
         <li><a href="logout.php" class="blue"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
       </ul>
     </div>
-  </div>  
+  </div>
 </nav>
 <!-- Nav Bar Ends-->
 
-  
-  
+
+
   <div class="container">
     <h1 style="color:blue;">Edit Profile</h1>
   	<hr>
-	  
+
       <!-- edit form column -->
       <div class="col-md-9 personal-info">
         <!--<div class="alert alert-info alert-dismissable">
-          <a class="panel-close close" data-dismiss="alert">×</a> 
+          <a class="panel-close close" data-dismiss="alert">×</a>
           <i class="fa fa-coffee"></i>
           This is an <strong>.alert</strong>. Use this to show important messages to the user.
         </div>-->
 
         <h3>Educational info</h3>
-        
+
         <form action="edit_profile_backend.php" method="POST" class="form-horizontal" role="form" enctype="multipart/form-data">
 
         {{ csrf_field() }}
         @foreach ($studentdetails as $sd)
-         
+
+
           
-          
-          <!--</form>-->
         </div>
       </div>
-    
-            
+
+
         <div style="float:right;" class="col-md-9">
         <div class="form-horizontal">
             <label for="fieldcurrently" class="col-lg-4 control-label">Field Currently</label>
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-            <input type="text" class="form-control" id="FieldCurrently" name="FieldCurrently" placeholder="Field Currently" 
+            <input type="text" class="form-control" id="FieldCurrently" name="FieldCurrently" placeholder="Field Currently"
             value="{{ $sd->FieldCurrently }}">
-        </div> 
+        </div>
         <br>
 
         <div class="form-horizontal">
@@ -253,7 +252,7 @@ function closeNav() {
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
             <input type="text" class="form-control" id="Year1Aggregate" name="Year1Aggregate" placeholder="Year1Aggregate"
             value="{{ $sd->Year1Aggregate }}">
-        </div> 
+        </div>
         <br>
 
 
@@ -263,17 +262,17 @@ function closeNav() {
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
             <input type="text" class="form-control" id="Year2Aggregate" name="Year2Aggregate" placeholder="Year2Aggregate"
             value="{{ $sd->Year2Aggregate }}">
-        </div> 
+        </div>
         <br>
 
-        
+
         <div class="form-horizontal">
             <label for="year3aggregate" class="col-lg-4 control-label">Year 3 aggregate</label>
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
             <input type="text" class="form-control" id="Year3Aggregate" name="Year3Aggregate" placeholder="Year3Aggregate"
             value="{{ $sd->year3aggregate }}">
-        </div> 
+        </div>
         <br>
 
 
@@ -283,7 +282,7 @@ function closeNav() {
             <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
             <input type="text" class="form-control" id="TenthAggregate" name="TenthAggregate" placeholder="TenthAggregate"
             value="{{ $sd->TenthAggregate }}"
-        </div> 
+        </div>
         <br>
 
         <div class="form-horizontal">
@@ -292,7 +291,7 @@ function closeNav() {
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
             <input type="text" class="form-control" id="TwelfthAggregate" name="TwelfthAggregate" placeholder="TwelfthAggregate"
             value="{{ $sd->TwelfthAggregate }}">
-            
+
              </div>
 </div>
 
@@ -313,7 +312,7 @@ function closeNav() {
             <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
             <input type="text" class="form-control" id="postgrad" name="postgrad" placeholder="postgrad"
             value="{{ $sd->postgrad }}">
-        </div> 
+        </div>
         <br>
         </form>
       </div>
@@ -321,7 +320,7 @@ function closeNav() {
 </div>
 </div>
 <hr>
-  
+
   <script>
     // sandbox disable popups
     if (window.self !== window.top && window.name!="view1") {;
@@ -330,7 +329,7 @@ function closeNav() {
       window.prompt = function(){/*disable prompt*/};
       window.open = function(){/*disable open*/};
     }
-    
+
     // prevent href=# click jump
     document.addEventListener("DOMContentLoaded", function() {
       var links = document.getElementsByTagName("A");
@@ -358,12 +357,12 @@ function closeNav() {
       }
     }, false);
   </script>
-  
+
   <!--scripts loaded here-->
-  
+
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
+
   <div style="float: left;">
 <div id="google_translate_element"></div>
 <script type="text/javascript">
@@ -371,7 +370,7 @@ function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
 }
 </script>
- 
+
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </div>
 

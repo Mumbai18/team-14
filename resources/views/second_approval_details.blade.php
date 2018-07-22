@@ -21,10 +21,10 @@
     <link href="assets/css/bootstrap-formhelpers-currencies.flags.css" rel="stylesheet">
     <link href="assets/css/docs.css" rel="stylesheet">
     <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
-  
+
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>First Approval Details</title>
@@ -33,16 +33,16 @@
   <meta name="google" value="notranslate">
   <link rel="shortcut icon" href="/images/cp_ico.png">
 
-  
+
   <!--stylesheets / link tags loaded here-->
 
 
 
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
-  
 
-  
+
+
 
   <style type="text/css">@import url("//bootswatch.com/sandstone/bootstrap.min.css");
 
@@ -168,19 +168,19 @@
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
-    <div class="navbar-header">      
-    <div style="float:right";>           
-      
+    <div class="navbar-header">
+    <div style="float:right";>
+
       </div>
-    </div> 
+    </div>
 
 
     <div class="nav navbar-nav navbar" id="myNavbar">
     <div class="nav navbar-nav navbar">
 
     <!-- Side bar starts-->
-    
-    
+
+
 <span style="font-size:30px;cursor:pointer;color:white;" onclick="openNav()">&#9776;</span>
 
 <script>
@@ -197,22 +197,22 @@ function closeNav() {
 </div>
     <a class="navbar-brand" href="#" style="padding-left:50px;color:white;">Educon : By Jain Social Group</a>
     </div>
-    
+
       <ul class="nav navbar-nav navbar-right">
 
         <li class="active"><a href="#">Home</a></li>
         <li><a href="#" class="blue">Services</a></li>
-        <li><a href="#" class="blue">About Us </a></li>  
+        <li><a href="#" class="blue">About Us </a></li>
         <li><a href="profile.php" class="blue"><span class="glyphicon glyphicon-user"></span></a></li>
         <li><a href="logout.php" class="blue"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
       </ul>
     </div>
-  </div>  
+  </div>
 </nav>
 <!-- Nav Bar Ends-->
 
-  
-  
+
+
   <div class="container">
     <h1 style="color:blue;">Enter Level 2 Details</h1>
   	<hr>
@@ -222,47 +222,47 @@ function closeNav() {
       edit form column -->
       <div class="col-md-12 personal-info">
         <!--<div class="alert alert-info alert-dismissable">
-          <a class="panel-close close" data-dismiss="alert">×</a> 
+          <a class="panel-close close" data-dismiss="alert">×</a>
           <i class="fa fa-coffee"></i>
           This is an <strong>.alert</strong>. Use this to show important messages to the user.
         </div>-->
 
-          <!--</form>-->
+
         </div>
       <div style="float: left;">
         <div id="google_translate_element" style=""></div>
- 
+
         <script type="text/javascript">
         function googleTranslateElementInit() {
         new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
         }
         </script>
- 
+
         <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
- 
-            
-        
+
+
+
         <div class="form-horizontal">
             <label for="owner" class="col-lg-4 control-label">Accomodation on Own or Rented?</label>
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
             <input type="text" class="form-control" id="Owner" name="owner" placeholder="" 
             value="">
-        </div> 
+        </div>
         <br>
 
-        
-        
+
+
         <div class="form-horizontal">
             <label for="type" class="col-lg-4 control-label">Type of Accomodation</label>
             <div class="input-group pb-modalreglog-input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
             <input type="text" class="form-control" id="Type" name="type" placeholder=""
             value="">
-        </div> 
+        </div>
         <br>
 
-        
+
 
 
         <div class="form-horizontal">
@@ -273,7 +273,7 @@ function closeNav() {
             <option value="Y">Yes</option>
             <option value="N">No</option>
              </select>
-        </div> 
+        </div>
         <br>
 
         <div class="form-horizontal">
@@ -282,7 +282,7 @@ function closeNav() {
             <span class="input-group-addon"><span class="fa fa-rupee"></span></span>
             <input type="number" class="form-control" id="Mincome" name="mincome" placeholder="Value"
             value="">
-        </div> 
+        </div>
         <br>
 
         <div class="form-horizontal">
@@ -291,7 +291,7 @@ function closeNav() {
             <span class="input-group-addon"><span class="fa fa-rupee"></span></span>
             <input type="number" class="form-control" id="Fincome" name="fincome" placeholder="Value"
             value="">
-        </div> 
+        </div>
         <br>
 
         <div class="form-horizontal">
@@ -300,7 +300,7 @@ function closeNav() {
             <span class="input-group-addon"><span class="fa fa-rupee"></span></span>
             <input type="number" class="form-control" id="Sincome" name="sincome" placeholder="Value"
             value="">
-        </div> 
+        </div>
         <br>
 
         <div class="form-horizontal">
@@ -309,7 +309,7 @@ function closeNav() {
             <span class="input-group-addon"><span class="fa fa-rupee"></span></span>
             <input type="number" class="form-control" id="Grant" name="grant" placeholder="Amount"
             value="">
-        </div> 
+        </div>
         <br>
 
         <div class="form-horizontal">
@@ -318,7 +318,7 @@ function closeNav() {
             <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
             <input type="number" class="form-control" id="Tieup" name="tieup" placeholder="Name"
             value="">
-        </div> 
+        </div>
         <br>
 
         <table style="border: 2px; align-items: center; ">
@@ -345,7 +345,7 @@ function closeNav() {
                 <td><input type="text" name="bbboard"></td>
                 <td><input type="text" name="ssschool"></td>
                 <td><input type="number" name="mmmarks"></td>
-            </tr> 
+            </tr>
         </table>
         <br>
         <div class="form-horizontal">
@@ -354,275 +354,10 @@ function closeNav() {
             <span class="input-group-addon"><span class="glyphicon glyphicon-education"></span></span>
             <input type="text" class="form-control" id="sports" name="sports" placeholder="Sports"
             value="">
-        </div> 
+        </div>
         <br>
 </div>
 
-        <!--<br>
-         <div class="form-horizontal">
-            <label for="dob" class="col-lg-4 control-label">DOB</label>
-            <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-            <input type="date" class="form-control" id="DOB" name="dob" placeholder="Date of Birth"
-            value="">
-            </div>
-        </div>
-        <br>
-
-         <div class="form-horizontal">
-            <label for="age" class="col-lg-4 control-label">Age</label>
-            <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
-            <input type="number" class="form-control" id="Age" name="age" placeholder="Age"
-            value="">
-        </div> 
-        <br>
-
-
-        <div class="form-horizontal">
-            <label for="phone" class="col-lg-4 control-label">Phone Number</label>
-            <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
-            <input type="number" class="form-control" id="PhoneNo" name="mobileNo" placeholder="PhoneNo"
-            value="">
-        </div> 
-        <br>
-
-        <div class="form-horizontal">
-            <label for="landline" class="col-lg-4 control-label">Landline</label>
-            <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
-            <input type="number" class="form-control" id="Landline" name="landline" placeholder="Landline"
-            value="">
-        </div> 
-        <br>
-
-        <div class="form-horizontal">
-            <label for="caste" class="col-lg-4 control-label">Caste</label>
-            <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
-            <input type="text" class="form-control" id="Caste" name="caste" placeholder="Caste"
-            value="">
-        </div> 
-        <br>
-
-        <div class="form-horizontal">
-            <label for="currentAddress" class="col-lg-4 control-label">Current Address</label>
-            <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
-            <input type="text" class="form-control" id="currentAddress" name="currentAddress" placeholder="Current Address"
-            value="">
-        </div> 
-        <br>
-
-
-        <input type="hidden" name="inputtype" value="">
-
-                                        <label for="state" class="col-lg-4 control-label" >State</label>
-                                        <div class="input-group pb-modalreglog-input-group">
-                                        <span class="input-group-addon"><span class="glyphicon glyphicon-globe"></span></span>
-                                        <select name="state" class="form-control" value="">
-                                                <option value="">------------Select State------------</option>
-<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-<option value="Andhra Pradesh">Andhra Pradesh</option>
-<option value="Arunachal Pradesh">Arunachal Pradesh</option>
-<option value="Assam">Assam</option>
-<option value="Bihar">Bihar</option>
-<option value="Chandigarh">Chandigarh</option>
-<option value="Chhattisgarh">Chhattisgarh</option>
-<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
-<option value="Daman and Diu">Daman and Diu</option>
-<option value="Delhi">Delhi</option>
-<option value="Goa">Goa</option>
-<option value="Gujarat">Gujarat</option>
-<option value="Haryana">Haryana</option>
-<option value="Himachal Pradesh">Himachal Pradesh</option>
-<option value="Jammu and Kashmir">Jammu and Kashmir</option>
-<option value="Jharkhand">Jharkhand</option>
-<option value="Karnataka">Karnataka</option>
-<option value="Kerala">Kerala</option>
-<option value="Lakshadweep">Lakshadweep</option>
-<option value="Madhya Pradesh">Madhya Pradesh</option>
-<option value="Maharashtra">Maharashtra</option>
-<option value="Manipur">Manipur</option>
-<option value="Meghalaya">Meghalaya</option>
-<option value="Mizoram">Mizoram</option>
-<option value="Nagaland">Nagaland</option>
-<option value="Orissa">Orissa</option>
-<option value="Pondicherry">Pondicherry</option>
-<option value="Punjab">Punjab</option>
-<option value="Rajasthan">Rajasthan</option>
-<option value="Sikkim">Sikkim</option>
-<option value="Tamil Nadu">Tamil Nadu</option>
-<option value="Tripura">Tripura</option>
-<option value="Uttaranchal">Uttaranchal</option>
-<option value="Uttar Pradesh">Uttar Pradesh</option>
-<option value="West Bengal">West Bengal</option>
-                                            </select>
-                                        </div><br>
-                                        </div>
-                                      </div>
-
-                
-             <div class="form-horizontal">
-                                        <label for="state" class="col-lg-4 control-label" style="">City</label>
-                                        <div class="input-group pb-modalreglog-input-group">
-                                        <span class="input-group-addon"><span class="glyphicon glyphicon-globe"></span></span>
-                                        <select name="city" class="form-control" value="">
-                                                <option value="">------------Select City------------</option>
-                                                <option value="Mumbai">Mumbai</option>
-                                                <option value="Pune">Pune</option>
-                                                <option value="Nagpur">Nagpur</option>
-                                                <option value="Aurangabad">Aurangabad</option>
-                                        </select>
-                                        </div><br>
-                                        </div>
-                                      </div>
-
-
-                  <div class="form-horizontal">
-            <label for="phone" class="col-lg-4 control-label">PinCode</label>
-            <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
-            <input type="number" class="form-control" id="Pincode" name="pincode" placeholder="Pincode"
-            value="">
-        </div> 
-        <br>
-
-        <div class="form-horizontal">
-            <label for="class" class="col-lg-4 control-label">Current Class</label>
-            <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-            <input type="text" class="form-control" id="class" name="class" placeholder="Class" 
-            value="">
-        </div> 
-        <br>
-
-        <div class="form-horizontal">
-            <label for="stream" class="col-lg-4 control-label">Stream(If Applicable)</label>
-            <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-            <input type="text" class="form-control" id="stream" name="stream" placeholder="Stream" 
-            value="">
-        </div> 
-        <br>
-
-        <div class="form-horizontal">
-            <label for="fathername" class="col-lg-4 control-label">Father's Name</label>
-            <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-            <input type="text" class="form-control" id="FatherName" name="fatherName" placeholder="Father Name" 
-            value="">
-        </div> 
-        <br>  
-
-        <div class="form-horizontal">
-            <label for="fatherqual" class="col-lg-4 control-label">Father's Qualification</label>
-            <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-            <input type="text" class="form-control" id="FatherQual" name="fatherQualification" placeholder="FatherQual" 
-            value="">
-        </div> 
-        <br>
-
-        <div class="form-horizontal">
-            <label for="fatherofficeaddr" class="col-lg-4 control-label">Father's Office Address</label>
-            <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
-            <input type="text" class="form-control" id="faoffaddr" name="fatherOfficeAddress" placeholder="Fathers office address"
-            value="">
-        </div> 
-        <br>
-
-        <div class="form-horizontal">
-            <label for="faphone" class="col-lg-4 control-label">Father's Phone Number</label>
-            <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
-            <input type="number" class="form-control" id="FatherPhoneNo" name="fatherContact" placeholder="FatherPhoneNo"
-            value="">
-        </div> 
-        <br>
-
-        <div class="form-horizontal">
-            <label for="faemail" class="col-lg-4 control-label">Father's Email</label>
-            <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-            <input type="text" class="form-control" id="FaEmail" name="fatherEmailId" placeholder="FaEmail"
-            value="">
-        </div> 
-        <br>
-
-        <div class="form-horizontal">
-            <label for="mothername" class="col-lg-4 control-label">Mother's Name</label>
-            <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-            <input type="text" class="form-control" id="MotherName" name="motherName" placeholder="Mother Name" 
-            value="">
-        </div> 
-        <br>  
-
-        <div class="form-horizontal">
-            <label for="motherqual" class="col-lg-4 control-label">Mother's Qualification</label>
-            <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-            <input type="text" class="form-control" id="MotherQual" name="motherQualification" placeholder="MotherQual" 
-            value="">
-        </div> 
-        <br>
-
-        <div class="form-horizontal">
-            <label for="motherofficeaddr" class="col-lg-4 control-label">Mother's Office Address</label>
-            <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
-            <input type="text" class="form-control" id="mooffaddr" name="motherOfficeAddress" placeholder="Mother office address"
-            value="">
-        </div> 
-        <br>
-
-        <div class="form-horizontal">
-            <label for="maphone" class="col-lg-4 control-label">Mother's Phone Number</label>
-            <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
-            <input type="number" class="form-control" id="MotherPhoneNo" name="motherContact" placeholder="MotherPhoneNo"
-            value="">
-        </div> 
-        <br>
-
-        <div class="form-horizontal">
-            <label for="moemail" class="col-lg-4 control-label">Mother's Email</label>
-            <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-            <input type="text" class="form-control" id="MoEmail" name="motherEmailId" placeholder="MoEmail"
-            value="">
-        </div> 
-        <br>
-
-        <div class="form-horizontal">
-            <label for="income" class="col-lg-4 control-label">Total Family Income</label>
-            <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
-            <input type="number" class="form-control" id="Income" name="totalFamilyIncome" placeholder="Income"
-            value="">
-        </div> 
-        <br>
-
-        <div class="form-horizontal">
-            <label for="members" class="col-lg-4 control-label">Total Family Members</label>
-            <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
-            <input type="number" class="form-control" id="Members" name="totalNoOfMembers" placeholder="Members"
-            value="">
-        </div> 
-        <br>
-
-        <div class="form-horizontal">
-            <label for="burden" class="col-lg-4 control-label">Total Burden</label>
-            <div class="input-group pb-modalreglog-input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
-            <input type="number" class="form-control" id="Burden" name="totalBurden" placeholder="Burden"
-            value="">
-        </div> 
-        <br>-->
 
 
                  <div class="form-group">
@@ -639,7 +374,7 @@ function closeNav() {
 </div>
 </div>
 <hr>
-  
+
   <script>
     // sandbox disable popups
     if (window.self !== window.top && window.name!="view1") {;
@@ -648,7 +383,7 @@ function closeNav() {
       window.prompt = function(){/*disable prompt*/};
       window.open = function(){/*disable open*/};
     }
-    
+
     // prevent href=# click jump
     document.addEventListener("DOMContentLoaded", function() {
       var links = document.getElementsByTagName("A");
@@ -676,16 +411,16 @@ function closeNav() {
       }
     }, false);
   </script>
-  
+
   <!--scripts loaded here-->
-  
+
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
-  
-  
+
+
+
   <script>
-  
+
   </script>
 
 </body>
