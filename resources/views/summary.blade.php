@@ -57,6 +57,8 @@ for (i = 0; i < coll.length; i++) {
 
 
 <div class="container">
+@foreach($studentsAssigned as $sa)
+
   <h2>Summary Page</h2>
 
   <div class="panel-group" id="accordion">
@@ -73,28 +75,28 @@ for (i = 0; i < coll.length; i++) {
       <tr>
         <td width="50%" align="center">ID:</td>
         <td width="30%" align="center">
-          Ans daalo
+          {{ $sa->id }}
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">First Name:</td>
         <td width="30%" align="center">
-          Ans daalo
+          {{ $sa->firstName }}
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">Last Name:</td>
         <td width="30%" align="center">
-          Ans daalo
+          {{ $sa->lastName }}
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">Email ID:</td>
         <td width="30%" align="center">
-          Ans daalo
+          {{ $sa->emailId }}
         </td>
       </tr>
 
@@ -102,42 +104,42 @@ for (i = 0; i < coll.length; i++) {
       <tr>
         <td width="50%" align="center">Mobile No:</td>
         <td width="30%" align="center">
-          Ans daalo
+          {{ $sa->mobileNo }}
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">Landline:</td>
         <td width="30%" align="center">
-          Ans daalo
+          {{ $sa->landline }}
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">Age:</td>
         <td width="30%" align="center">
-          Ans daalo
+          {{ $sa->age }}
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">DOB:</td>
         <td width="30%" align="center">
-          Ans daalo
+          {{ $sa->dob }}
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">gender:</td>
         <td width="30%" align="center">
-          Ans daalo
+          {{ $sa->gender }}
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">Class:</td>
         <td width="30%" align="center">
-          Ans daalo
+          {{ $sa->class }}
         </td>
       </tr>
 
@@ -145,7 +147,7 @@ for (i = 0; i < coll.length; i++) {
       <tr>
         <td width="50%" align="center">Stream:</td>
         <td width="30%" align="center">
-          Ans daalo
+          {{ $sa->stream }}
         </td>
       </tr>
 
@@ -153,21 +155,21 @@ for (i = 0; i < coll.length; i++) {
       <tr>
         <td width="50%" align="center">Major:</td>
         <td width="30%" align="center">
-          Ans daalo
+          {{ $sa->major }}
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">Caste:</td>
         <td width="30%" align="center">
-          Ans daalo
+          {{ $sa->caste }}
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">Current Address:</td>
         <td width="30%" align="center">
-          Ans daalo
+          {{ $sa->currentAddress }}
         </td>
       </tr>
 
@@ -175,7 +177,7 @@ for (i = 0; i < coll.length; i++) {
       <tr>
         <td width="50%" align="center">Pincode:</td>
         <td width="30%" align="center">
-          Ans daalo
+          {{ $sa->pincode }}
         </td>
       </tr>
 
@@ -183,7 +185,7 @@ for (i = 0; i < coll.length; i++) {
     <tr>
         <td width="50%" align="center">City:</td>
         <td width="30%" align="center">
-          Ans daalo
+          {{ $sa->city }}
         </td>
       </tr>
 
@@ -191,109 +193,110 @@ for (i = 0; i < coll.length; i++) {
       <tr>
         <td width="50%" align="center">State:</td>
         <td width="30%" align="center">
-          Ans daalo
+          {{ $sa->state }}
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">Father Name:</td>
         <td width="30%" align="center">
-          Ans daalo
+          {{ $sa->fatherName }}
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">Father Contact:</td>
         <td width="30%" align="center">
-          Ans daalo
+          {{ $sa->fatherContact }}
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">Father EmailID:</td>
         <td width="30%" align="center">
-          Ans daalo
+          {{ $sa->fatherEmailId }}
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">Father Qualification:</td>
         <td width="30%" align="center">
-          Ans daalo
+          {{ $sa->fatherQualification }}
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">Father Office Address:</td>
         <td width="30%" align="center">
-          Ans daalo
+          {{ $sa->fatherOfficeAddress }}
         </td>
       </tr>
-
+<!--
       <tr>
         <td width="50%" align="center">Mother Name:</td>
         <td width="30%" align="center">
-          Ans daalo
+          
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">Mother Contact:</td>
         <td width="30%" align="center">
-          Ans daalo
+          
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">Mother EmailID:</td>
         <td width="30%" align="center">
-          Ans daalo
+          
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">Mother Qualification:</td>
         <td width="30%" align="center">
-          Ans daalo
+          
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">Mother Office Address:</td>
         <td width="30%" align="center">
-          Ans daalo
+          
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">Total Family Income:</td>
         <td width="30%" align="center">
-          Ans daalo
+          
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">Total Family Members:</td>
         <td width="30%" align="center">
-          Ans daalo
+          
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">Total Burden:</td>
         <td width="30%" align="center">
-          Ans daalo
+          
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">Educon ID:</td>
         <td width="30%" align="center">
-          Ans daalo
+          
         </td>
       </tr>
-
+-->
     </tbody>
+    @endforeach
 
   </table>
 
@@ -316,28 +319,28 @@ for (i = 0; i < coll.length; i++) {
       <tr>
         <td width="50%" align="center">ID:</td>
         <td width="30%" align="center">
-          Ans daalo
+          
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">User ID:</td>
         <td width="30%" align="center">
-          Ans daalo
+          
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">tenth result:</td>
         <td width="30%" align="center">
-          Ans daalo
+          
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">twelfth result:</td>
         <td width="30%" align="center">
-          Ans daalo
+          
         </td>
       </tr>
 
@@ -345,14 +348,14 @@ for (i = 0; i < coll.length; i++) {
       <tr>
         <td width="50%" align="center">father's Highest Qualification:</td>
         <td width="30%" align="center">
-          Ans daalo
+          
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">Mother's Highest Qualification:</td>
         <td width="30%" align="center">
-          Ans daalo
+          
         </td>
       </tr>
 
@@ -378,28 +381,28 @@ for (i = 0; i < coll.length; i++) {
       <tr>
         <td width="50%" align="center">ID:</td>
         <td width="30%" align="center">
-          Ans daalo
+          
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">User ID:</td>
         <td width="30%" align="center">
-          Ans daalo
+          
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">mother's Salary:</td>
         <td width="30%" align="center">
-          Ans daalo
+          
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">father's Salary:</td>
         <td width="30%" align="center">
-          Ans daalo
+          
         </td>
       </tr>
 
@@ -407,14 +410,14 @@ for (i = 0; i < coll.length; i++) {
       <tr>
         <td width="50%" align="center">father's Profession:</td>
         <td width="30%" align="center">
-          Ans daalo
+          
         </td>
       </tr>
 
       <tr>
         <td width="50%" align="center">Mother's Profession:</td>
         <td width="30%" align="center">
-          Ans daalo
+          
         </td>
       </tr>
 

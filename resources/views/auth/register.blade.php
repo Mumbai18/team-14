@@ -102,6 +102,7 @@
                                                         <option value="Volunteer">Volunteer</option>
                                                         <option value="Core">Core</option>
                                                         <option value="Committee">Committee</option>
+                                                        <option value="Exec">Exec</option>
                                                     </select>
                                                 </div>
                                             </div>

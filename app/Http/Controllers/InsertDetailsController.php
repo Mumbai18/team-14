@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\User;
+use App\Exec;
 use App\Student;
 use App\Donor;
 use App\Volunteer;
@@ -83,13 +84,24 @@ public function updateFirstStatus(Request $request){
       
       $status = $request->statuses;
       foreach($status as $s){
+            $vol = Volunteer::where('assignedTo','=','0')->first();
+            $exec = Exec::where('assignedTo','=','0')->first();
             $stud = Student::find($s);
             $stud->status = 1;
+            $stud->execAssigned = $exec->id;
+            $stud->volunteerAssigned = $vol->id;
             $stud->save();
-            $vol = Volunteer::where('assignedTo','!=',null)->first();
+            
             if($vol != null)
             {
                   $volun = Volunteer::find($vol->id);
+                  $volun->assignedTo = $s;
+                  $volun->save();
+                  
+            }
+            if($exec != null)
+            {
+                  $volun = Exec::find($exec->id);
                   $volun->assignedTo = $s;
                   $volun->save();
                   

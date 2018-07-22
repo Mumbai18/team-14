@@ -7,9 +7,10 @@ use DB;
 
 use App\User;
 use App\Student;
-
+use App\Exec;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 
 class PrimaryDetailsRetrievalController extends Controller
@@ -28,10 +29,11 @@ class PrimaryDetailsRetrievalController extends Controller
 
 	public function showSummary(){
 		$execuser = Auth::user();
-		$studentsAssigned = Student::where('execAssigned','=','$execuser->id')->get();
-		foreach($studentsAssigned as $s){
-			
-		}
-		return view('summary')-with('studentsAssigned',$studentsAssigned);
+		error_log($execuser);
+		$exec = Exec::where('user_id','=',$execuser->id)->first();
+		$studentsAssigned = Student::where('execAssigned','=',$exec->id)->get();
+		
+		error_log($studentsAssigned);
+		return view('summary')->with('studentsAssigned',$studentsAssigned);
 	}
 }

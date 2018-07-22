@@ -36,13 +36,17 @@
         <td>{{ $stu->firstName }} {{ $stu->lastName }}</td>
         <td>{{ $stu->amountRequired }}</td>
         <td><input type="text" name=""></td>
-        <td><button type="button" class="btn btn-success">Approve</button>
-        <button type="button" class="btn btn-danger">Reject</button></td>
+        <td><a href="/approve"><button type="button" class="btn btn-success">Approve</button></a>
+        <a href="/reject"><button type="button" class="btn btn-danger" onclick="reject()">Reject</button><a href=""></td>
       </tr>
       @endforeach
     </tbody>
   </table>
 </div>
+
+<script type="text/javascript">
+  
+</script>
 
 @endsection
 

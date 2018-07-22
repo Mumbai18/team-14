@@ -288,9 +288,9 @@
         <a href="#">Your Profile</a> 
     
         <a href="#">Chat</a> 
-        @if(Auth::user()->role == 'Exec')
+        
         <a href="/showsummary">View summary</a> 
-        @endif
+        
       </div> 
        
        

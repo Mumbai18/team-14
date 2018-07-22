@@ -11,7 +11,8 @@ class ProcessingController extends Controller
 {
 
 	public function secondApproval(Request $request){
-		$allstudents = Student::where('status','=','2')->orderby('period');
+		$allstudents = Student::where('status','=','2')->orderby('period')->get();
+
 		//storing number of days as deadline and (income-burden)/members
 		return view('secondapproval')->with('allstudents',$allstudents);
 
