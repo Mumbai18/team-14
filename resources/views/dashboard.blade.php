@@ -2,37 +2,37 @@
 <html>
   <head>
       <title>JavaScript Pie Chart</title>
-      <script src="https://cdn.anychart.com/js/8.0.1/anychart-core.min.js"></script>
+      
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  </head>
+  <body>
+
+    <div class="container" style="background: #eee; margin: 0; margin-right: -20px">
+      <div class="row">
+        <div class="panel col-md-6" style="margin-left: 15px">
+          <canvas class="col-md-12" id="canvas"></canvas>      
+        </div>
+        <div class="panel col-md-6">
+          <div class="col-md-12" id="chart_div"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="panel col-md-6">
+          <img id="myImg" class="col-md-12" src="/images/x.png" />
+        </div>
+        <div class="panel col-md-6">
+          <img id="myImg1" class="col-md-12" src="/images/a.png"/>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+<script src="https://cdn.anychart.com/js/8.0.1/anychart-core.min.js"></script>
       <script src="https://cdn.anychart.com/js/8.0.1/anychart-pie.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
       <script src="Chart.bundle.js"></script>
   <script src="utils.js"></script>
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-
-  <style>
-  canvas {
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-  }
-  </style>
-      <style type="text/css">
-        html, body, #container {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-
-}
-      </style>
-
-      <style>
-      body { padding-top:20px; }
-      .panel-body .btn:not(.btn-block) { width:120px;margin-bottom:10px; }
-    </style>
-
        <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
@@ -60,74 +60,9 @@
         chart8.draw(data, options);
       }
     </script>
-  </head>
-  <body>
 
-
-
-  <div style="width: 75%">
-    <canvas id="canvas"></canvas>
-  </div>
-    <div align="center" id="container" style="width: 30%; height: 30%"></div>
-
-    <br>
-    <br>
-
-    <br>
-    <br>
-
-    <br>
-    <br>
-
-    <br>
-    <br>
-    <br>
-    <br>
-
-
-
-    <h3 align="center">Line graph describing the increase in the number of donors</h3>
-
-  <div id="chart_div"></div>
-
-    <img id="myImg" src="/images/x.png" style="width:60%;  !important; height:60% !important;">
-        <img id="myImg1" src="/images/a.png" style="width:40%;  !important; height:50% !important;">
-
-  <!-- snippet -->
-  <div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title">
-                        <span class="glyphicon glyphicon-bookmark"></span> Quick Shortcuts</h3>
-                </div>
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-xs-6 col-md-6">
-                          <a href="#" class="btn btn-danger btn-lg" role="button"><span class="glyphicon glyphicon-list-alt"></span> <br/>Apps</a>
-                          <a href="#" class="btn btn-warning btn-lg" role="button"><span class="glyphicon glyphicon-bookmark"></span> <br/>Bookmarks</a>
-                          <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-signal"></span> <br/>Reports</a>
-                          <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-comment"></span> <br/>Comments</a>
-                        </div>
-                        <div class="col-xs-6 col-md-6">
-                          <a href="#" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-user"></span> <br/>Users</a>
-                          <a href="#" class="btn btn-info btn-lg" role="button"><span class="glyphicon glyphicon-file"></span> <br/>Notes</a>
-                          <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-picture"></span> <br/>Photos</a>
-                          <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-tag"></span> <br/>Tags</a>
-                        </div>
-                    </div>
-                    <a href="http://www.jquery2dotnet.com/" class="btn btn-success btn-lg btn-block" role="button"><span class="glyphicon glyphicon-globe"></span> Website</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-      </body>
     <script>
-        <!-- chart code will be here -->
-       
+      
 
 
 anychart.onDocumentReady(function() {
@@ -327,5 +262,6 @@ function drawBasic() {
 
     
     </script>
+      </body>
   
 </html>
