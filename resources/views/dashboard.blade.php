@@ -80,8 +80,8 @@
 
   <div id="chart_div"></div>
 
-    <img id="myImg" src="x.png" style="width:60%;  !important; height:60% !important;">
-        <img id="myImg1" src="a.png" style="width:40%;  !important; height:50% !important;">
+    <img id="myImg" src="/images/x.png" style="width:60%;  !important; height:60% !important;">
+        <img id="myImg1" src="/images/a.png" style="width:40%;  !important; height:50% !important;">
 
   
       </body>
