@@ -178,40 +178,7 @@
 
     <!-- Side bar starts-->
     
-    <?php
-    if($user_type==0){
-        
-        echo '<div id="mySidenav" class="sidenav">';
-        echo '<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>';
-        echo '<a href="Upload_documents.php">Upload Documents</a>';
-        echo '<a href="University_search.php">Apply Now</a>';
-        echo '<a href="application_status.php">Application Status</a>';
-        echo '<a href="profile.php">Your Profile</a>';
-        echo '</div>';
-    }
-        else if($user_type==1){
-            echo '<div id="mySidenav" class="sidenav">';
-            echo '<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>';
-            echo '<a href="pending_request.php">Pending Request</a>';
-            echo '<a href="completed_applications.php">Completed Applications</a>';
-            echo '<a href="pending_applications.php">Pending Applications</a>';
-            echo '<a href="all_applications.php">All Applications</a>';
-            echo '<a href="profile.php">Your Profile</a>';
-            echo '</div>';
-        }
-        else{
-            echo '<div id="mySidenav" class="sidenav">';
-            echo '<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>';
-            echo '<a href="Upload_documents.php">Pending Request</a>';
-            echo '<a href="University_search.php">Apply Now</a>';
-            echo '<a href="application_status.php">Application Status</a>';
-            echo '<a href="profile.php">Your Profile</a>';
-            echo '</div>';
-            
-        } 
-        ?>
-
-
+    
 <span style="font-size:30px;cursor:pointer;color:white;" onclick="openNav()">&#9776;</span>
 
 <script>
