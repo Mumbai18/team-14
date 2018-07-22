@@ -132,7 +132,7 @@
 
      <h2>Upload Extra details</h2>
 
-     <div class="container" style="width:100%;">
+	 <div class="container" style="width:100%;">
         <h3>Your Extra-Ciricular Certificate</h3>
         <br/>
         <div class="col-md-12">

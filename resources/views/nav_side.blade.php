@@ -194,7 +194,7 @@
                 <li class="active"><a href="indexx.html">Home</a></li>
                 <li><a href="#" class="blue">Services</a></li>
                 <li><a href="#" class="blue">About Us </a></li>  
-                <li><a href="profile.php" class="blue"><span class="glyphicon glyphicon-user"></span><?php echo " ", $fname?></a></li>
+                <li><a href="profile.php" class="blue"><span class="glyphicon glyphicon-user"></span></a></li>
                 <li><a href="logout.php" class="blue"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
               </ul>
             </div>
