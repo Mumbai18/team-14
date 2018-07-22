@@ -1,22 +1,69 @@
+<?php
+
+//include 'server/websocket_server.php';
+                    
+                    $con =mysqli_connect("localhost","root","qweasdzxc","egnitia_localhost") or die(mysqli_error($con));
+                    session_start();
+                    $_SESSION["logged_in"] = true;   
+    
+                    $User_id= $_SESSION["User_id"];
+                    $abc = "SELECT * from user where User_id = $User_id";
+                    $pqr = mysqli_query($con, $abc);
+                    $xyz = mysqli_fetch_assoc($pqr);
+
+                    $abc = "SELECT * from user where User_id = $User_id";
+    $pqr = mysqli_query($con, $abc);
+    $xyz = mysqli_fetch_assoc($pqr);
+    $usertype = $xyz['User_type'];
+    
+
+    if($usertype==0){
+    $qwes = "SELECT * from student where User_id = $User_id";
+    $rty = mysqli_query($con, $qwes);
+    $uio = mysqli_fetch_assoc($rty);
+    $fname = $uio['First_name'];
+    }
+
+
+    elseif($usertype == 1 ){
+
+    $qwea = "SELECT * from agent where Agent_id = $User_id";
+    $rty = mysqli_query($con, $qwea);
+    $uio = mysqli_fetch_assoc($rty);
+    $fname = $uio['First_Name'];
+    }
+
+    else{
+    $qwem = "SELECT * from marketer where Marketer_id = $User_id";
+    $rty = mysqli_query($con, $qwem);
+    $uio = mysqli_fetch_assoc($rty);
+    $fname = $uio['First_name'];
+    }
+    
+    $email = $xyz['User_Email'];
+    $var=1;
+                    
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-	<title></title>
+    <title></title>
 </head>
 <body>
-	<div class="container">
-		<h2 class="text-center" style="margin-top: 5px; padding-top: 0 ">Welcome to our Chatroom</h2>
+    <div class="container">
+        <h2 class="text-center" style="margin-top: 5px; padding-top: 0 ">Welcome to our Chatroom</h2>
 
-		<div class="row">
-			<div class="col-md-4">
-				
-				<table class="table table-striped">
-					<thead>
-						<tr>
-							<th> Users</th>
+        <div class="row">
+            <div class="col-md-4">
+                
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th> Users</th>
                             <th> Username </th>
                             <th> Email </th>
                         </tr>
@@ -26,10 +73,10 @@
                             <td> <?php echo $fname; ?> </td>
                             <td> <?php echo $email; ?> </td>
                         </tr>
-					</thead>
-				</table>
-			</div>
-			<div class="col-md-8" style="height:100%">
+                    </thead>
+                </table>
+            </div>
+            <div class="col-md-8" style="height:100%">
                 <div id="messages">
                     <table id="chats" class="table table-striped">
                         <thead>
@@ -102,8 +149,8 @@
 
 
             </div>
-		</div>
-	</div>
+        </div>
+    </div>
 
 </body>
 <script type="text/javascript">
